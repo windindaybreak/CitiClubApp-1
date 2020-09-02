@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CitiClubApp</string>
+    <string name="login">登录</string>
+    <string name="regester_button">还没有账号？注册</string>
+    <string name="todo">TODO</string>
+    <string name="forget_password">忘记密码</string>
+</resources>
