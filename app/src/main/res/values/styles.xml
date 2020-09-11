@@ -7,11 +7,13 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <!--按钮去阴影-->
     <style name="Button_List_Style" parent="@style/Widget.AppCompat.Button.Borderless">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
 
     </style>
+    <!--设置字体在文本框中的格式-->
     <style name="EditText_Style">
         <item name="android:gravity">left|center_vertical</item>
         <item name="android:paddingLeft">20dp</item>
@@ -21,12 +23,12 @@
         <item name="android:textColor">#9E9B9B</item>
         <item name="android:textSize">18sp</item>
     </style>
+    <!--蓝字文本框的一些固定属性的设置-->
     <style name="BlueButton_Style" >
         <item name="android:textColor">#7DA5EA</item>
         <item name="android:textSize">18sp</item>
         <item name="android:clickable">true</item>
         <item name="android:layout_gravity">center</item>
-
     </style>
 
 </resources>
