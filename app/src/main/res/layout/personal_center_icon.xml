@@ -11,24 +11,24 @@
         android:layout_width="103dp"
         android:layout_height="50dp"
         android:layout_marginBottom="104dp"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/business_hall_icon_title"
+        android:gravity="center|center_vertical"
+        android:text="@string/personal_center_icon_title"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/imageView2"
-        android:layout_width="35dp"
-        android:layout_height="18dp"
-        app:altSrc="@drawable/businesshall_light"
+        android:layout_width="31dp"
+        android:layout_height="47dp"
+        app:altSrc="@drawable/personal_center_light"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintHorizontal_bias="0.455"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/businesshall" />
+        app:srcCompat="@drawable/personal_center" />
 </androidx.constraintlayout.motion.widget.MotionLayout>

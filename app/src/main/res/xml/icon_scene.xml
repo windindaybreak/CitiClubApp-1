@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="300">
+       <KeyFrameSet>
+           <KeyCycle
+               motion:motionTarget="@+id/textView2"
+               motion:framePosition="1"
+               motion:wavePeriod="1"
+               android:translationX="5dp"
+               motion:waveOffset="0dp" />
+       </KeyFrameSet>
+        <OnClick/>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_height="29dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="110dp"
+            android:id="@+id/textView2"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/imageView2"
+            motion:layout_constraintHorizontal_bias="0.498" >
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="#8A8A8A" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/imageView2"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="47dp"
+            android:layout_height="31dp"
+            motion:layout_constraintBottom_toTopOf="@+id/textView2"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_editor_absoluteY="235dp">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="0" />
+            <CustomAttribute
+                motion:attributeName="colorFilter" />
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/textView2"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="115dp"
+            android:layout_height="31dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/imageView2"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="0dp" >
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/bottom_icon_blue" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/imageView2"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="47dp"
+            android:layout_height="31dp"
+            motion:layout_constraintBottom_toTopOf="@+id/textView2"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_editor_absoluteY="233dp">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+    </ConstraintSet>
+</MotionScene>
