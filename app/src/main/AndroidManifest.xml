@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".real_name_authentificationActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
-        <!-- 注册界面 -->
+        <activity android:name=".successfulRegis.SuccessfulRiges"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            ></activity>
+        <activity
+            android:name=".real_name_authentificationActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- 注册界面 -->
         <activity
             android:name=".RigesterActivity.RigesterActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- 登录界面 -->

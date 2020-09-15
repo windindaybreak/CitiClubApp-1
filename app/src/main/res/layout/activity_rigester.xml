@@ -204,7 +204,7 @@
         app:layout_constraintGuide_percent="0.81395346" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button_successfulRegisters"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="15dp"
