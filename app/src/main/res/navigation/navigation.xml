@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/business_hall_Fragment"
-        android:name="com.example.citiclubapp.Fragment.Business_hall_Fragment"
+        android:name="com.example.citiclubapp.MainPage.Fragment.Business_hall_Fragment"
         android:label="@string/business_hall_icon_title"
         tools:layout="@layout/fragment_business_hall_" />
     <fragment
         android:id="@+id/myBusinessFragment"
-        android:name="com.example.citiclubapp.Fragment.MyBusinessFragment"
+        android:name="com.example.citiclubapp.MainPage.Fragment.MyBusinessFragment"
         android:label="@string/my_business_icon_title"
         tools:layout="@layout/fragment_my_business" />
     <fragment
         android:id="@+id/noticeFragment"
-        android:name="com.example.citiclubapp.Fragment.NoticeFragment"
+        android:name="com.example.citiclubapp.MainPage.Fragment.NoticeFragment"
         android:label="@string/notice_icon_title"
         tools:layout="@layout/fragment_notice" />
     <fragment
         android:id="@+id/personalCenterFragment"
-        android:name="com.example.citiclubapp.Fragment.PersonalCenterFragment"
+        android:name="com.example.citiclubapp.MainPage.Fragment.PersonalCenterFragment"
         android:label="fragment_personal_center"
         tools:layout="@layout/fragment_personal_center" />
 </navigation>

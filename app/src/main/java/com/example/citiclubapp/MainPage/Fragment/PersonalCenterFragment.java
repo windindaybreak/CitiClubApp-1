@@ -1,4 +1,4 @@
-package com.example.citiclubapp.Fragment;
+package com.example.citiclubapp.MainPage.Fragment;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import com.example.citiclubapp.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link NoticeFragment#newInstance} factory method to
+ * Use the {@link PersonalCenterFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class NoticeFragment extends Fragment {
+public class PersonalCenterFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class NoticeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public NoticeFragment() {
+    public PersonalCenterFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class NoticeFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment NoticeFragment.
+     * @return A new instance of fragment PersonalCenterFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static NoticeFragment newInstance(String param1, String param2) {
-        NoticeFragment fragment = new NoticeFragment();
+    public static PersonalCenterFragment newInstance(String param1, String param2) {
+        PersonalCenterFragment fragment = new PersonalCenterFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class NoticeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notice, container, false);
+        return inflater.inflate(R.layout.fragment_personal_center, container, false);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.citiclubapp.Fragment;
+package com.example.citiclubapp.MainPage.Fragment;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import com.example.citiclubapp.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link MyBusinessFragment#newInstance} factory method to
+ * Use the {@link Business_hall_Fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyBusinessFragment extends Fragment {
+public class Business_hall_Fragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class MyBusinessFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public MyBusinessFragment() {
+    public Business_hall_Fragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class MyBusinessFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment MyBusinessFragment.
+     * @return A new instance of fragment Business_hall_Fragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static MyBusinessFragment newInstance(String param1, String param2) {
-        MyBusinessFragment fragment = new MyBusinessFragment();
+    public static Business_hall_Fragment newInstance(String param1, String param2) {
+        Business_hall_Fragment fragment = new Business_hall_Fragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class MyBusinessFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my_business, container, false);
+        return inflater.inflate(R.layout.fragment_business_hall_, container, false);
     }
 }

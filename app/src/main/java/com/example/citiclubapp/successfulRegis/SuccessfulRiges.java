@@ -8,7 +8,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.citiclubapp.R;
-import com.example.citiclubapp.real_name_authentificationActivity;
+import com.example.citiclubapp.MainPage.real_name_authentificationActivity;
 
 /**
  * author:李季桥

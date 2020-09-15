@@ -1,4 +1,4 @@
-package com.example.citiclubapp;
+package com.example.citiclubapp.MainPage;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,6 +13,8 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.citiclubapp.R;
 
 import static androidx.navigation.fragment.NavHostFragment.findNavController;
 

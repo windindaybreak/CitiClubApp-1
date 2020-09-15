@@ -8,8 +8,6 @@ import android.view.WindowManager;
 
 import com.example.citiclubapp.LoginActivity.LoginActivity;
 import com.example.citiclubapp.R;
-import com.example.citiclubapp.RigesterActivity.RigesterActivity;
-import com.example.citiclubapp.real_name_authentificationActivity;
 
 
 /**
