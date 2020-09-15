@@ -15,7 +15,7 @@
                android:translationX="5dp"
                motion:waveOffset="0dp" />
        </KeyFrameSet>
-        <OnClick/>
+
     </Transition>
 
     <ConstraintSet android:id="@+id/start">
@@ -30,7 +30,7 @@
             motion:layout_constraintHorizontal_bias="0.498" >
             <CustomAttribute
                 motion:attributeName="textColor"
-                motion:customColorValue="#8A8A8A" />
+                motion:customColorValue="#0F111A" />
         </Constraint>
         <Constraint
             android:id="@+id/imageView2"
