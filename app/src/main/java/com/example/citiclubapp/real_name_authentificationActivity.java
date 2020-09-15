@@ -71,10 +71,10 @@ public class real_name_authentificationActivity extends AppCompatActivity {
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
             public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                businesshallMotionLayout.setProgress(0f);
-                mybusinessMotionLayout.setProgress(0f);
-                noticeMotionLayout.setProgress(0f);
-                personalCenterMotionLayout.setProgress(0f);
+                businesshallMotionLayout.setProgress(0.1f);
+                mybusinessMotionLayout.setProgress(0.1f);
+                noticeMotionLayout.setProgress(0.1f);
+                personalCenterMotionLayout.setProgress(0.1f);
                 switch (destination.getId()){
                     case R.id.business_hall_Fragment:
                         businesshallMotionLayout.transitionToEnd();
