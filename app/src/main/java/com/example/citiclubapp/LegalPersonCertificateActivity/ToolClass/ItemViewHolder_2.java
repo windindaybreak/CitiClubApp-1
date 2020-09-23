@@ -1,4 +1,4 @@
-package com.example.citiclubapp.data.model;
+package com.example.citiclubapp.LegalPersonCertificateActivity.ToolClass;
 
 import android.view.View;
 import android.widget.Button;

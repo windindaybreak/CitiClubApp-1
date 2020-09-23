@@ -1,5 +1,4 @@
-package com.example.citiclubapp.data.model;
-
+package com.example.citiclubapp.LegalPersonCertificateActivity.ToolClass;
 
 public class InfoItem {
     private int type;
