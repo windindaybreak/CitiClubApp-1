@@ -1,4 +1,4 @@
-package com.example.citiclubapp.data.model;
+package com.example.citiclubapp.LegalPersonCertificateActivity.ToolClass;
 
 public class Infoitem_2 {
     String item_name;

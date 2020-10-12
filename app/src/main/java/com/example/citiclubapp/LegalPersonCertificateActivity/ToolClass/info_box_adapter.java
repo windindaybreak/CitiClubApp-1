@@ -1,4 +1,4 @@
-package com.example.citiclubapp.data.model;
+package com.example.citiclubapp.LegalPersonCertificateActivity.ToolClass;
 
 import android.graphics.Color;
 import android.media.Image;

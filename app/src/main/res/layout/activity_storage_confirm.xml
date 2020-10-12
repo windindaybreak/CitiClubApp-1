@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LegalPersonCertificateActivity.StorageConfirm">
+
+    <com.example.citiclubapp.widgetLayout.InsideTitle
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:text="仓储公司法人认证"
+                android:textColor="@color/design_default_color_on_secondary"
+                android:textSize="20sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/license_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3"
+                    android:text="营业执照"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp"/>
+
+                <Button
+                    android:id="@+id/license_button"
+                    style="@style/BlueButton_Style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="7"
+                    android:text="点击上传营业执照照片"
+                    android:textColor="@color/cardview_light_background"
+                    android:background="@drawable/button_shape"/>
+
+            </LinearLayout>
+
+            <com.example.citiclubapp.widgetLayout.EditorBar
+                android:id="@+id/org_code_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.example.citiclubapp.widgetLayout.EditorBar
+                android:id="@+id/company_name_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.example.citiclubapp.widgetLayout.EditorBar
+                android:id="@+id/business_registration_code_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.example.citiclubapp.widgetLayout.EditorBar
+                android:id="@+id/business_registration_office_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.example.citiclubapp.widgetLayout.EditorBar
+                android:id="@+id/registration_status_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.example.citiclubapp.widgetLayout.EditorBar
+                android:id="@+id/tax_registration_code_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.example.citiclubapp.widgetLayout.EditorBar
+                android:id="@+id/company_address_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.example.citiclubapp.widgetLayout.EditorBar
+                android:id="@+id/company_phoneNumber_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="法人身份证"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textSize="18sp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:orientation="vertical">
+
+                    <Button
+                        style="@style/BlueButton_Style"
+                        android:id="@+id/upload_front_IDphoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="点击上传身份证照片（正面）"
+                        android:textColor="@color/cardview_light_background"
+                        android:background="@drawable/button_shape"/>
+
+                    <Button
+                        android:layout_marginTop="10dp"
+                        style="@style/BlueButton_Style"
+                        android:id="@+id/upload_back_IDphoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="点击上传身份证照片（反面）"
+                        android:textColor="@color/cardview_light_background"
+                        android:background="@drawable/button_shape"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.example.citiclubapp.widgetLayout.EditorBar
+                android:id="@+id/legalPerson_name_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.example.citiclubapp.widgetLayout.EditorBar
+                android:id="@+id/legalPerson_code_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.example.citiclubapp.widgetLayout.EditorBar
+                android:id="@+id/legalPerson_phoneNumber_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                style="@style/BlueButton_Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:id="@+id/submit"
+                android:text="提交"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="15dp"
+                android:textSize="25sp"
+                android:textColor="@color/cardview_light_background"
+                android:background="@drawable/button_shape"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
