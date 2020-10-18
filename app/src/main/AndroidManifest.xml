@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LegalPersonCertificateActivity.StorageConfirm"
+        <activity android:name=".LegalPersonCertificateActivity.EnterpriseCertification"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".LegalPersonCertificateActivity.StorageCertification"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".successfulRegis.SuccessfulRiges"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"

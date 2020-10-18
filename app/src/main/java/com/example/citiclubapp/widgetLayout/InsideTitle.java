@@ -28,4 +28,8 @@ public class InsideTitle extends LinearLayout {
             }
         } );
     }
+
+    public void setTitle(String title){
+        name.setText(title);
+    }
 }
