@@ -1,13 +1,19 @@
 package com.example.citiclubapp.LegalPersonCertificateActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.citiclubapp.R;
+import com.example.citiclubapp.widgetLayout.ButtonChoosePhoto;
 import com.example.citiclubapp.widgetLayout.EditorBar;
 import com.example.citiclubapp.widgetLayout.InsideTitle;
+
+import static com.example.citiclubapp.widgetLayout.ButtonChoosePhoto.CHOOSE_PHOTO;
 
 public class StorageCertification extends AppCompatActivity {
 
@@ -16,6 +22,24 @@ public class StorageCertification extends AppCompatActivity {
             businessRegistrationOfficeEdit, registrationStatusEdit, taxRegistrationCodeEdit,
             companyAddressEdit, companyPhoneEdit, legalPersonNameEdit, legalPersonCodeEdit,
             legalPersonPhoneEdit;
+    private ButtonChoosePhoto licenseButton, IDButtonFront, IDButtonBack;
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        Uri uri=data.getData();
+        switch (requestCode){
+            case CHOOSE_PHOTO:
+                licenseButton.changeType(uri);
+                break;
+            case CHOOSE_PHOTO+1:
+                IDButtonFront.changeType(uri);
+                break;
+            case CHOOSE_PHOTO+2:
+                IDButtonBack.changeType(uri);
+                break;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +47,7 @@ public class StorageCertification extends AppCompatActivity {
         setContentView( R.layout.activity_storage_confirm );
         setTitle();
         initializeEditBar();
+        initializeButton();
     }
 
     private void setTitle(){
@@ -69,5 +94,15 @@ public class StorageCertification extends AppCompatActivity {
         taxRegistrationCodeEdit.setHint( "请输入税务登记证号" );
     }
 
-
+    private void initializeButton(){
+        licenseButton=findViewById(R.id.uploadLicense);
+        licenseButton.setText("点击上传营业执照照片");
+        licenseButton.setClick(0);
+        IDButtonFront=findViewById(R.id.upload_front_IDphoto);
+        IDButtonFront.setText("点击上传身份证照片（正面）");
+        IDButtonFront.setClick(1);
+        IDButtonBack=findViewById(R.id.upload_back_IDphoto);
+        IDButtonBack.setText("点击上传身份证照片（反面）");
+        IDButtonBack.setClick(2);
+    }
 }
