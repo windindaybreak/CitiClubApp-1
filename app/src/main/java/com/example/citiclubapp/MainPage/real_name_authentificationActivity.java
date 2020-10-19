@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.citiclubapp.R;
+import com.example.citiclubapp.widgetLayout.NameTitle;
 
 import static androidx.navigation.fragment.NavHostFragment.findNavController;
 
@@ -27,6 +28,7 @@ public class real_name_authentificationActivity extends AppCompatActivity {
             mybusinessMotionLayout,
             noticeMotionLayout,
             personalCenterMotionLayout;
+    NameTitle nameTitle;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,8 @@ public class real_name_authentificationActivity extends AppCompatActivity {
         mybusinessMotionLayout=findViewById(R.id.my_business_motionLayout);
         noticeMotionLayout=findViewById(R.id.notice_motionLayout);
         personalCenterMotionLayout=findViewById(R.id.personal_center_motionLayout);
+        nameTitle=findViewById(R.id.name_title1);
+        nameTitle.setText("仓单宝");
         Fragment fragment=getSupportFragmentManager().findFragmentById(R.id.navhostfragment);
         /**
          * todo:实现碎片的切换

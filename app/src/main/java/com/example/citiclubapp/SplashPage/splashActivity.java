@@ -10,6 +10,7 @@ import com.example.citiclubapp.LoginActivity.LoginActivity;
 import com.example.citiclubapp.R;
 
 
+
 /**
  * @author 吴瀚之
  * 应用的启动页面，暂停五秒后进入登录页面

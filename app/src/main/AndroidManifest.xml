@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LegalPersonCertificateActivity.StorageConfirm"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".successfulRegis.SuccessfulRiges"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-            ></activity>
+        <activity
+            android:name=".LegalPersonCertificateActivity.StorageConfirm"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".successfulRegis.SuccessfulRiges"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".MainPage.real_name_authentificationActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- 注册界面 -->

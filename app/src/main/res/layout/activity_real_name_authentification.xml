@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SuccessfulRigesActivity">
+    android:layout_height="match_parent">
+    <!--tools:context=".SuccessfulRigesActivity"-->
+
 
     <fragment
         android:id="@+id/navhostfragment"
@@ -66,7 +67,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <include
-            layout="@layout/inside_title"
+            android:id="@+id/name_title1"
+            layout="@layout/name_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
