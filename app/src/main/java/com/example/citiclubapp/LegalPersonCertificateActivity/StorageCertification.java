@@ -99,10 +99,10 @@ public class StorageCertification extends AppCompatActivity {
         licenseButton.setText("点击上传营业执照照片");
         licenseButton.setClick(0);
         IDButtonFront=findViewById(R.id.upload_front_IDphoto);
-        IDButtonFront.setText("点击上传身份证照片（正面）");
+        IDButtonFront.setText("点击上传身份证照片\n（正面）");
         IDButtonFront.setClick(1);
         IDButtonBack=findViewById(R.id.upload_back_IDphoto);
-        IDButtonBack.setText("点击上传身份证照片（反面）");
+        IDButtonBack.setText("点击上传身份证照片\n（反面）");
         IDButtonBack.setClick(2);
     }
 }

@@ -26,11 +26,13 @@
         android:hint="default"
         android:paddingLeft="15dp"
         android:layout_marginLeft="15dp"
+        android:scrollHorizontally="true"
         android:layout_weight="7"
         android:background="@drawable/edittext_shape"
         android:layout_gravity="center_vertical"
         android:drawableLeft="@color/design_default_color_background"
         android:drawablePadding="0dp"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:singleLine="true" />
 
 </LinearLayout>
