@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 import com.example.citiclubapp.R;
 
+/**
+ * 设置标题栏，可设置姓名，并且配有返回按钮
+ */
 public class InsideTitle extends LinearLayout {
     public ImageButton back;
     public TextView name;
