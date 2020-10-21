@@ -1,16 +1,15 @@
-package com.example.citiclubapp.LoginActivity;
+package com.example.citiclubapp.ui.LoginActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.citiclubapp.R;
-import com.example.citiclubapp.RigesterActivity.RigesterActivity;
+import com.example.citiclubapp.ui.RigesterActivity.RigesterActivity;
 
 public class LoginActivity extends AppCompatActivity {
 EditText editText_Name,editText_PassWord;               //初始化布局文件一些控件的对象

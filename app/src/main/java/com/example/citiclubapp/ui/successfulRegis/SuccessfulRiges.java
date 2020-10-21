@@ -1,4 +1,4 @@
-package com.example.citiclubapp.successfulRegis;
+package com.example.citiclubapp.ui.successfulRegis;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.citiclubapp.ui.BusinessHallPage.BusinessHallActivity;
 import com.example.citiclubapp.R;
-import com.example.citiclubapp.MainPage.real_name_authentificationActivity;
+
 
 /**
  * author:李季桥
@@ -28,9 +29,9 @@ public class SuccessfulRiges extends AppCompatActivity {
        login2.setOnClickListener(new View.OnClickListener() {
            @Override
             public void onClick(View view) {
-               Intent intent = new Intent(  SuccessfulRiges.this, real_name_authentificationActivity.class);
+               Intent intent = new Intent(  SuccessfulRiges.this, BusinessHallActivity.class);
                 startActivity(intent);
-                //finish();
+                finish();
             }
         });
 

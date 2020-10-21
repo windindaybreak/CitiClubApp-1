@@ -9,23 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.BusinessHallPage.BusinessHallActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity><!-- 业务大厅界面 -->
         <activity
-            android:name=".LegalPersonCertificateActivity.StorageConfirm"
+            android:name=".ui.LegalPersonCertificateActivity.StorageConfirm"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".successfulRegis.SuccessfulRiges"
+            android:name=".ui.successfulRegis.SuccessfulRiges"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
         <activity
-            android:name=".MainPage.real_name_authentificationActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- 注册界面 -->
-        <activity
-            android:name=".RigesterActivity.RigesterActivity"
+            android:name=".ui.RigesterActivity.RigesterActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- 登录界面 -->
         <activity
-            android:name=".LoginActivity.LoginActivity"
+            android:name=".ui.LoginActivity.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- 启动界面（主界面） -->
         <activity
-            android:name=".SplashPage.splashActivity"
+            android:name=".ui.SplashPage.splashActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

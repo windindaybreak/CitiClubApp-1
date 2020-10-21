@@ -1,4 +1,4 @@
-package com.example.citiclubapp.RigesterActivity;
+package com.example.citiclubapp.ui.RigesterActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.citiclubapp.LoginActivity.LoginActivity;
+import com.example.citiclubapp.ui.LoginActivity.LoginActivity;
 import com.example.citiclubapp.R;
-import com.example.citiclubapp.successfulRegis.SuccessfulRiges;
+import com.example.citiclubapp.ui.successfulRegis.SuccessfulRiges;
 
 public class RigesterActivity extends AppCompatActivity {
 Button havAccount,successfulRegisters;;

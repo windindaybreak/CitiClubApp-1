@@ -1,4 +1,4 @@
-package com.example.citiclubapp.SplashPage;
+package com.example.citiclubapp.ui.SplashPage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
 
-import com.example.citiclubapp.LoginActivity.LoginActivity;
+import com.example.citiclubapp.ui.LoginActivity.LoginActivity;
 import com.example.citiclubapp.R;
 
 

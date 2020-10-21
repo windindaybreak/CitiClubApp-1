@@ -12,8 +12,7 @@ public class warrant {
     private String owner;//存货人
     private StorageExpand storageExpand;//货物存储期限，年 月 日
     private String StoragePlace;//存储地点
-    private String preparingPerson;//填发人
-    private String preparingPlace;//填发地
+    private String preparingPlace;//填发
     private Date preparingDate;//填发日期
     private String StorageCompany;//仓储公司
     private  int value;//折合市值
@@ -90,14 +89,6 @@ public class warrant {
 
     public void setStoragePlace(String storagePlace) {
         StoragePlace = storagePlace;
-    }
-
-    public String getPreparingPerson() {
-        return preparingPerson;
-    }
-
-    public void setPreparingPerson(String preparingPerson) {
-        this.preparingPerson = preparingPerson;
     }
 
     public String getPreparingPlace() {

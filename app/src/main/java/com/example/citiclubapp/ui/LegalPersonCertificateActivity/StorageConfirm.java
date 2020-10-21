@@ -1,4 +1,4 @@
-package com.example.citiclubapp.LegalPersonCertificateActivity;
+package com.example.citiclubapp.ui.LegalPersonCertificateActivity;
 
 import android.os.Bundle;
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".LegalPersonCertificateActivity.StorageConfirm">
+    tools:context=".ui.LegalPersonCertificateActivity.StorageConfirm">
 
     <com.example.citiclubapp.widgetLayout.InsideTitle
         android:id="@+id/title"

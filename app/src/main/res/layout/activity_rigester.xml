@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RigesterActivity.RigesterActivity">
+    tools:context=".ui.RigesterActivity.RigesterActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"
