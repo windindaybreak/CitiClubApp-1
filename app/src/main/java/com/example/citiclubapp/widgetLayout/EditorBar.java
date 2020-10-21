@@ -19,4 +19,12 @@ public class EditorBar extends LinearLayout {
         text=findViewById( R.id.text_editor );
         edit=findViewById( R.id.edit_editor );
     }
+
+    public void setText(String str){
+        text.setText(str);
+    }
+
+    public void setHint(String hint){
+        edit.setHint(hint);
+    }
 }

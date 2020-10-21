@@ -9,15 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.BusinessHallPage.BusinessHallActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity><!-- 业务大厅界面 -->
-        <activity
-            android:name=".ui.LegalPersonCertificateActivity.StorageConfirm"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ui.successfulRegis.SuccessfulRiges"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-
         <activity
             android:name=".ui.RigesterActivity.RigesterActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" /> <!-- 登录界面 -->
@@ -34,5 +28,7 @@
             </intent-filter>
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
 </manifest>

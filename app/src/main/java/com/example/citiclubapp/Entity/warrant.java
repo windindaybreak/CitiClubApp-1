@@ -17,6 +17,20 @@ public class warrant {
     private String StorageCompany;//仓储公司
     private  int value;//折合市值
     private  int debtvalue;//贷款额
+    private boolean isZhiya;//能否质押，能true，不能false
+
+    public boolean isZhiya() {
+        return isZhiya;
+    }
+
+    public void setZhiya(boolean zhiya) {
+        isZhiya = zhiya;
+    }
+
+    public warrant() {
+        isZhiya=true;
+    }
+
     public String getStorageCompany() {
         return StorageCompany;
     }

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.citiclubapp.ui.BusinessHallPage.BusinessHallActivity;
 import com.example.citiclubapp.R;
+import com.example.citiclubapp.ui.LegalPersonCertificateActivity.EnterpriseCertification;
 
 
 /**
@@ -29,9 +30,8 @@ public class SuccessfulRiges extends AppCompatActivity {
        login2.setOnClickListener(new View.OnClickListener() {
            @Override
             public void onClick(View view) {
-               Intent intent = new Intent(  SuccessfulRiges.this, BusinessHallActivity.class);
+               Intent intent = new Intent(  SuccessfulRiges.this, EnterpriseCertification.class);
                 startActivity(intent);
-                finish();
             }
         });
 
