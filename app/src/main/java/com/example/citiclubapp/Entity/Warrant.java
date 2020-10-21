@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * 构建仓单的实体类方便之后的数据处理
  */
-public class warrant {
+public class Warrant {
     private String warrantID;//仓单号
     private String cargoItem;//货物种类
     private int cargoWeight;//货物重量
@@ -27,7 +27,7 @@ public class warrant {
         isZhiya = zhiya;
     }
 
-    public warrant() {
+    public Warrant() {
         isZhiya=true;
     }
 
