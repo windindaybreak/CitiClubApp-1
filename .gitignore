@@ -11,3 +11,6 @@
 /build
 /captures
 .externalNativeBuild
+app/build.gradle
+app/build.gradle
+app/src/main/java/com/example/citiclubapp/ui/LoginActivity/LoginActivity.java

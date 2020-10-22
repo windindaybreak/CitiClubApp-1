@@ -51,8 +51,8 @@ public class ApplyForStorageActivity extends AppCompatActivity {
         address.setText("现存地址");
         address.setHint("请输入当前货物存放地址");
         expand=findViewById(R.id.expand);
-        address.setText("存储期限");
-        address.setHint("请输入存储期限（年/月/日）");
+        expand.setText("存储期限");
+        expand.setHint("请输入存储期限（年/月/日）");
     }
 
     private void initializeButton(){
