@@ -3,6 +3,8 @@ package com.example.citiclubapp.ui.LegalPersonCertificateActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -18,11 +20,12 @@ import static com.example.citiclubapp.widgetLayout.ButtonChoosePhoto.CHOOSE_PHOT
 public class EnterpriseCertification extends AppCompatActivity {
 
     private InsideTitle title;
-    private EditorBar orgCodeEdit, companyName, businessRegistrationCodeEdit,
+    private EditorBar orgCodeEdit, businessRegistrationCodeEdit, companyName,
             businessRegistrationOfficeEdit, registrationStatusEdit, taxRegistrationCodeEdit,
             companyAddressEdit, companyPhoneEdit, legalPersonNameEdit, legalPersonCodeEdit,
             legalPersonPhoneEdit;
     private ButtonChoosePhoto licenseButton, IDButtonFront, IDButtonBack;
+    private Button submit;
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -104,6 +107,14 @@ public class EnterpriseCertification extends AppCompatActivity {
         IDButtonBack=findViewById(R.id.upload_back_IDphoto);
         IDButtonBack.setText("点击上传身份证照片\n（反面）");
         IDButtonBack.setClick(2);
+
+        submit=findViewById(R.id.submit_enter);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
 }

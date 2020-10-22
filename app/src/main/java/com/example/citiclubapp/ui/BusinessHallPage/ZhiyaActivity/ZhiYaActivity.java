@@ -1,4 +1,4 @@
-package com.example.citiclubapp.ui.ZhiyaActivity;
+package com.example.citiclubapp.ui.BusinessHallPage.ZhiyaActivity;
 
 import android.os.Bundle;
 import android.view.View;

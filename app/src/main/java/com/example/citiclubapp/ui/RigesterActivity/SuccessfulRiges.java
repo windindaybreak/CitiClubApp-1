@@ -1,4 +1,4 @@
-package com.example.citiclubapp.ui.successfulRegis;
+package com.example.citiclubapp.ui.RigesterActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.citiclubapp.ui.BusinessHallPage.BusinessHallActivity;
 import com.example.citiclubapp.R;
+import com.example.citiclubapp.ui.LegalPersonCertificateActivity.CertificateNavActivity;
+import com.example.citiclubapp.ui.LegalPersonCertificateActivity.EnterpriceBankCertificationActivity;
 import com.example.citiclubapp.ui.LegalPersonCertificateActivity.EnterpriseCertification;
 
 
@@ -30,7 +31,7 @@ public class SuccessfulRiges extends AppCompatActivity {
        login2.setOnClickListener(new View.OnClickListener() {
            @Override
             public void onClick(View view) {
-               Intent intent = new Intent(  SuccessfulRiges.this, EnterpriseCertification.class);
+               Intent intent = new Intent(  SuccessfulRiges.this, CertificateNavActivity.class);
                 startActivity(intent);
             }
         });

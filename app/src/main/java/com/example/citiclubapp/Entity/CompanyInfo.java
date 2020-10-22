@@ -19,6 +19,15 @@ public class CompanyInfo {
     String legalPersonName;//法人姓名
     String legalPersonID;//法人证字号号
     String legalPersonPhone;//法人联系电话
+    String bankAccount;//银行账号
+
+    public String getBankAccount() {
+        return bankAccount;
+    }
+
+    public void setBankAccount(String bankAccount) {
+        this.bankAccount = bankAccount;
+    }
 
     public String getCreditNumber() {
         return creditNumber;

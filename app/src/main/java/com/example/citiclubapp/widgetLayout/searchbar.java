@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -25,9 +26,9 @@ public class searchbar extends LinearLayout {
     }
     public searchbar(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        LayoutInflater.from(context).inflate(R.layout.searchbar,this);
         warrantNum=findViewById(R.id.editTextWarrantNum);
         search=findViewById(R.id.search);
-        LayoutInflater.from(context).inflate(R.layout.searchbar,this);
     }
 
 }

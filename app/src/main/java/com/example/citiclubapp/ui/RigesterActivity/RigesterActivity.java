@@ -9,7 +9,6 @@ import android.widget.Button;
 
 import com.example.citiclubapp.ui.LoginActivity.LoginActivity;
 import com.example.citiclubapp.R;
-import com.example.citiclubapp.ui.successfulRegis.SuccessfulRiges;
 
 public class RigesterActivity extends AppCompatActivity {
 Button havAccount,successfulRegisters;;

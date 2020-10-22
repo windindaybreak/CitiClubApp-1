@@ -10,25 +10,25 @@
 
     <TextView
         android:id="@+id/item_left_text"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:layout_marginRight="25dp"
         android:layout_marginBottom="6dp"
-        android:layout_weight="1"
+        android:layout_weight="3"
         android:paddingRight="8dp"
         android:text="TextView"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/item_right_text"
-        android:layout_width="199dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="6dp"
         android:layout_marginRight="6dp"
-        android:layout_weight="1"
+        android:layout_weight="5"
         android:text="TextView"
         android:textSize="20sp" />
 </LinearLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.BusinessHallPage.SearchResultActivity">
+    tools:context=".ui.BusinessHallPage.searchPage.SearchResultActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -38,7 +38,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
+
             <com.example.citiclubapp.widgetLayout.ItemInfo
+                android:id="@+id/warrantNum"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -50,37 +52,51 @@
                 android:textSize="20sp"
                 >
             </TextView>
+
             <com.example.citiclubapp.widgetLayout.ItemInfo
+                android:id="@+id/cargo_type"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
             </com.example.citiclubapp.widgetLayout.ItemInfo>
+
             <com.example.citiclubapp.widgetLayout.ItemInfo
+                android:id="@+id/cargo_num"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
             </com.example.citiclubapp.widgetLayout.ItemInfo>
+
             <com.example.citiclubapp.widgetLayout.ItemInfo
+                android:id="@+id/cargo_owner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
             </com.example.citiclubapp.widgetLayout.ItemInfo>
+
             <com.example.citiclubapp.widgetLayout.ItemInfo
+                android:id="@+id/storage_expand"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
             </com.example.citiclubapp.widgetLayout.ItemInfo>
+
             <com.example.citiclubapp.widgetLayout.ItemInfo
+                android:id="@+id/storage_place"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
             </com.example.citiclubapp.widgetLayout.ItemInfo>
+
             <com.example.citiclubapp.widgetLayout.ItemInfo
+                android:id="@+id/storage_company"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
             </com.example.citiclubapp.widgetLayout.ItemInfo>
+
             <com.example.citiclubapp.widgetLayout.ItemInfo
+                android:id="@+id/preparing_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 

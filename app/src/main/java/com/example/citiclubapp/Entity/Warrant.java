@@ -8,13 +8,13 @@ import java.util.Date;
 public class Warrant {
     private String warrantID;//仓单号
     private String cargoItem;//货物种类
-    private int cargoWeight;//货物重量
+    private int cargoWeight;//货物数量
     private String owner;//存货人
     private StorageExpand storageExpand;//货物存储期限，年 月 日
     private String StoragePlace;//存储地点
     private String preparingPlace;//填发
     private Date preparingDate;//填发日期
-    private String StorageCompany;//仓储公司
+    private String StorageCompany;//仓储公司(填发地）
     private  int value;//折合市值
     private  int debtvalue;//贷款额
     private boolean isZhiya;//能否质押，能true，不能false

@@ -1,4 +1,4 @@
-package com.example.citiclubapp.ui.ZhiyaActivity;
+package com.example.citiclubapp.ui.BusinessHallPage.ZhiyaActivity;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,20 +10,20 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.citiclubapp.Adapter.PreZhiYaAdapter;
+import com.example.citiclubapp.Adapter.PostZhiYaAdapter;
 import com.example.citiclubapp.Entity.Warrant;
 import com.example.citiclubapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PreFragment extends Fragment {
+public class PostFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = View.inflate(getActivity(), R.layout.fragment_cangdanzhiya_pre,null);
+        View view = View.inflate(getActivity(), R.layout.fragment_cangdanzhiya_post,null);
 
-        ListView listView = view.findViewById(R.id.ZhiYa_list_view_Pre);
+        ListView listView = view.findViewById(R.id.ZhiYa_list_view_Post);
 
         //获取数据源
         List<Warrant> warrants = new ArrayList<>();
@@ -37,9 +37,9 @@ public class PreFragment extends Fragment {
             warrants.add(warrant);
         }
 
-        PreZhiYaAdapter preAdapter = new PreZhiYaAdapter(view.getContext(),warrants);
+        PostZhiYaAdapter postAdapter = new PostZhiYaAdapter(view.getContext(),warrants);
 
-        listView.setAdapter(preAdapter);
+        listView.setAdapter(postAdapter);
 
         return view;
     }

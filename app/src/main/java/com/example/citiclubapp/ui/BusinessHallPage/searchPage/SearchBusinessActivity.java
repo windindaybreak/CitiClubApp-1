@@ -1,7 +1,8 @@
-package com.example.citiclubapp.ui.BusinessHallPage;
+package com.example.citiclubapp.ui.BusinessHallPage.searchPage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
@@ -19,11 +20,11 @@ private searchbar searchbar;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_business);
         iniView();
-        ImageView imageView=searchbar.getSearch();
-        imageView.setOnClickListener(new View.OnClickListener() {
+        searchbar.getSearch().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent=new Intent(SearchBusinessActivity.this,SearchResultActivity.class);
+                startActivity(intent);
             }
         });
     }

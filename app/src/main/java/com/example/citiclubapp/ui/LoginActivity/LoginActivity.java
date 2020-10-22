@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.citiclubapp.R;
+import com.example.citiclubapp.ui.BusinessHallPage.ApplyIntoStorage.ApplyForStorageActivity;
+import com.example.citiclubapp.ui.BusinessHallPage.searchPage.SearchBusinessActivity;
 import com.example.citiclubapp.ui.RigesterActivity.RigesterActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -23,6 +25,14 @@ EditText editText_Name,editText_PassWord;               //初始化布局文件�
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(LoginActivity.this, RigesterActivity.class);
+                startActivity(intent);
+            }
+        });
+        forget_password=findViewById(R.id.forget_password);
+        forget_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(LoginActivity.this, SearchBusinessActivity.class);
                 startActivity(intent);
             }
         });
