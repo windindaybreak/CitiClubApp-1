@@ -12,6 +12,76 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="15dp"
+                android:text="业务详情："
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp">
+
+                <com.example.citiclubapp.widgetLayout.ItemInfo
+                    android:id="@+id/type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.example.citiclubapp.widgetLayout.ItemInfo
+                    android:id="@+id/quality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.example.citiclubapp.widgetLayout.ItemInfo
+                    android:id="@+id/legal_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.example.citiclubapp.widgetLayout.ItemInfo
+                    android:id="@+id/storage_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.example.citiclubapp.widgetLayout.ItemInfo
+                    android:id="@+id/storage_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.example.citiclubapp.widgetLayout.ItemInfo
+                    android:id="@+id/send_person"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.example.citiclubapp.widgetLayout.ItemInfo
+                    android:id="@+id/send_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <com.example.citiclubapp.widgetLayout.ItemInfo
+                    android:id="@+id/send_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </LinearLayout>

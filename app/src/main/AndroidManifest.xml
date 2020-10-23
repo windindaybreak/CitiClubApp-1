@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.BusinessHallPage.MyWarrant.MyWarrantActivity"
+        <activity
+            android:name=".ui.BusinessHallPage.WarrantSelling.WarrantSellingActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ui.BusinessHallPage.MyWarrant.MyWarrantActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ui.BusinessHallPage.QualityControlAgency.QualityControlAgencyActivity"
@@ -56,5 +60,7 @@
             android:name=".ui.BusinessHallPage.ApplyIntoStorage.ApplyForStorageActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
+
+    <permission android:name="READ_EXTERNAL_STORAGE"/>
 
 </manifest>

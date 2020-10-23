@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -30,17 +31,21 @@ public class EnterpriseCertification extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Uri uri=data.getData();
-        switch (requestCode){
-            case CHOOSE_PHOTO:
-                licenseButton.changeType(uri);
-                break;
-            case CHOOSE_PHOTO+1:
-                IDButtonFront.changeType(uri);
-                break;
-            case CHOOSE_PHOTO+2:
-                IDButtonBack.changeType(uri);
-                break;
+        try{
+            Uri uri=data.getData();
+            switch (requestCode){
+                case CHOOSE_PHOTO:
+                    licenseButton.changeType(uri);
+                    break;
+                case CHOOSE_PHOTO+1:
+                    IDButtonFront.changeType(uri);
+                    break;
+                case CHOOSE_PHOTO+2:
+                    IDButtonBack.changeType(uri);
+                    break;
+            }
+        }catch (Exception e){
+            Toast.makeText(EnterpriseCertification.this, "未找到照片", Toast.LENGTH_SHORT).show();
         }
     }
 

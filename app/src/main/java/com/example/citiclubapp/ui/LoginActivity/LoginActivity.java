@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.citiclubapp.R;
-import com.example.citiclubapp.ui.BusinessHallPage.ApplyIntoStorage.ApplyForStorageActivity;
 import com.example.citiclubapp.ui.BusinessHallPage.searchPage.SearchBusinessActivity;
 import com.example.citiclubapp.ui.RigesterActivity.RigesterActivity;
 
