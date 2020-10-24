@@ -45,13 +45,13 @@
                 android:layout_height="wrap_content">
 
             </com.example.citiclubapp.widgetLayout.ItemInfo>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="仓单详情"
-                android:textSize="20sp"
-                >
-            </TextView>
+                android:textColor="#000000"
+                android:textSize="20sp"></TextView>
 
             <com.example.citiclubapp.widgetLayout.ItemInfo
                 android:id="@+id/cargo_type"
