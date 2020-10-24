@@ -19,7 +19,6 @@ import java.util.List;
 public class SellingAdapter extends ArrayAdapter<Warrant> {
 
     private int resourceId;
-    private InsideView insideView;
 
     public SellingAdapter(@NonNull Context context, int resource, @NonNull List<Warrant> objects) {
         super(context, resource, objects);
@@ -31,6 +30,7 @@ public class SellingAdapter extends ArrayAdapter<Warrant> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Warrant item=getItem(position);
         View view;
+        InsideView insideView;
         if(convertView==null){
             insideView=new InsideView();
             view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
@@ -42,21 +42,21 @@ public class SellingAdapter extends ArrayAdapter<Warrant> {
             view=convertView;
             insideView=(InsideView)convertView.getTag();
         }
-        setInsideValue(item);
+        insideView.setValue(item);
         return view;
-    }
-
-    private void setInsideValue(Warrant item){
-        insideView.id.setLeftText("仓单号:");
-        insideView.id.setRightText(item.getWarrantID());
-        insideView.type.setLeftText("物品种类:");
-        insideView.type.setRightText(item.getCargoItem());
-        insideView.company.setLeftText("仓储公司:");
-        insideView.company.setRightText(item.getStorageCompany());
     }
 
     class InsideView{
         ItemInfo id, type, company;
         Button selling;
+
+        public void setValue(Warrant item){
+            id.setLeftText("仓单号:");
+            id.setRightText(item.getWarrantID());
+            type.setLeftText("物品种类:");
+            type.setRightText(item.getCargoItem());
+            company.setLeftText("仓储公司:");
+            company.setRightText(item.getStorageCompany());
+        }
     }
 }

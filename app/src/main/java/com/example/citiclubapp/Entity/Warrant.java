@@ -1,11 +1,12 @@
 package com.example.citiclubapp.Entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * 构建仓单的实体类方便之后的数据处理
  */
-public class Warrant {
+public class Warrant implements Serializable {
     private String warrantID;//仓单号
     private String cargoItem;//货物种类
     private int cargoWeight;//货物数量

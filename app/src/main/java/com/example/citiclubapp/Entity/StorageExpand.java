@@ -1,9 +1,11 @@
 package com.example.citiclubapp.Entity;
 
+import java.io.Serializable;
+
 /**
  * 用于记录货物存储的期限
  */
-public class StorageExpand {
+public class StorageExpand implements Serializable {
     private int year;
     private int month;
     private int day;
