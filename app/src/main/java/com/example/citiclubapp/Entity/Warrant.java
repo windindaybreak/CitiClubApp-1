@@ -1,23 +1,61 @@
 package com.example.citiclubapp.Entity;
 
+import androidx.annotation.NonNull;
+import androidx.room.ColumnInfo;
+import androidx.room.Embedded;
+import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.Ignore;
+import androidx.room.Index;
+
 import java.util.Date;
 
 /**
  * 构建仓单的实体类方便之后的数据处理
  */
+
+
+@Entity(tableName = "Warrant",
+        primaryKeys = "warrantID"
+        )
 public class Warrant {
-    private String warrantID;//仓单号
+    @NonNull
+    @ColumnInfo(name = "warrantID")
+    private int warrantID;//仓单号(主键）
+    @ColumnInfo(name = "companyAccount")
+    private int companyAccount;//所属公司
+    @ColumnInfo(name = "cargoItem")
     private String cargoItem;//货物种类
+    @ColumnInfo(name = "cargoWeight")
     private int cargoWeight;//货物数量
+    @ColumnInfo(name = "owner")
     private String owner;//存货人
-    private StorageExpand storageExpand;//货物存储期限，年 月 日
+    @ColumnInfo(name = "storageExpand")
+    private int storageExpand;//货物存储期限(年)
+    @ColumnInfo(name = "StoragePlace")
     private String StoragePlace;//存储地点
+    @ColumnInfo(name = "preparingPlace")
     private String preparingPlace;//填发
-    private Date preparingDate;//填发日期
+//    @ColumnInfo(name = "preparingDate")
+//    private Date preparingDate;//填发日期
+    @ColumnInfo(name = "StorageCompany")
     private String StorageCompany;//仓储公司(填发地）
+    @ColumnInfo(name = "value")
     private  int value;//折合市值
+    @ColumnInfo(name = "debtvalue")
     private  int debtvalue;//贷款额
+    @ColumnInfo(name = "isZhiya")
     private boolean isZhiya;//能否质押，能true，不能false
+    @Ignore
+    public static int count=0;//总单数
+
+    public int getCompanyAccount() {
+        return companyAccount;
+    }
+
+    public void setCompanyAccount(int companyAccount) {
+        this.companyAccount = companyAccount;
+    }
 
     public boolean isZhiya() {
         return isZhiya;
@@ -56,11 +94,11 @@ public class Warrant {
     }
 
 
-    public String getWarrantID() {
+    public int getWarrantID() {
         return warrantID;
     }
 
-    public void setWarrantID(String warrantID) {
+    public void setWarrantID(int warrantID) {
         this.warrantID = warrantID;
     }
 
@@ -88,13 +126,12 @@ public class Warrant {
         this.owner = owner;
     }
 
-    public StorageExpand getStorageExpand() {
+    public int getStorageExpand() {
         return storageExpand;
     }
 
-    public void setStorageExpand(int year,int month, int day) {
-        this.storageExpand = new StorageExpand();
-        this.storageExpand.setStorageExpand(year,month,day);
+    public void setStorageExpand(int storageExpand) {
+        this.storageExpand = storageExpand;
     }
 
     public String getStoragePlace() {
@@ -113,13 +150,13 @@ public class Warrant {
         this.preparingPlace = preparingPlace;
     }
 
-    public Date getPreparingDate() {
-        return preparingDate;
-    }
-
-    public void setPreparingDate(int year,int month,int day) {
-        this.preparingDate = new Date(year,month,day);
-    }
+//    public Date getPreparingDate() {
+//        return preparingDate;
+//    }
+//
+//    public void setPreparingDate(int year,int month,int day) {
+//        this.preparingDate = new Date(year,month,day);
+//    }
 
 
 }

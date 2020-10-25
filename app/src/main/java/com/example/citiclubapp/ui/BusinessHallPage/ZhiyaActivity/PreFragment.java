@@ -29,7 +29,7 @@ public class PreFragment extends Fragment {
         List<Warrant> warrants = new ArrayList<>();
         for(int i = 0; i<10; i++){
             Warrant warrant = new Warrant();
-            warrant.setWarrantID(i+"");
+            warrant.setWarrantID(i);
             warrant.setCargoItem(i+"");
             warrant.setStorageCompany(i+"");
             warrant.setValue(i+1000);

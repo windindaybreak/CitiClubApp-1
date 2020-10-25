@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.citiclubapp.R;
-import com.example.citiclubapp.ui.BusinessHallPage.ApplyIntoStorage.ApplyForStorageActivity;
+import com.example.citiclubapp.ui.BusinessHallPage.WarrantSelling.WarrantSellingActivity;
 import com.example.citiclubapp.ui.BusinessHallPage.searchPage.SearchBusinessActivity;
 import com.example.citiclubapp.ui.RigesterActivity.RigesterActivity;
 
@@ -32,7 +32,7 @@ EditText editText_Name,editText_PassWord;               //初始化布局文件�
         forget_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(LoginActivity.this, SearchBusinessActivity.class);
+                Intent intent=new Intent(LoginActivity.this, WarrantSellingActivity.class);
                 startActivity(intent);
             }
         });
