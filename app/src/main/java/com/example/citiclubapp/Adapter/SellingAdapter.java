@@ -31,6 +31,7 @@ public class SellingAdapter extends ArrayAdapter<Warrant> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Warrant item=getItem(position);
         View view;
+        InsideView insideView;
         if(convertView==null){
             insideView=new InsideView();
             view = LayoutInflater.from(getContext()).inflate(resourceId, parent, false);
@@ -42,7 +43,7 @@ public class SellingAdapter extends ArrayAdapter<Warrant> {
             view=convertView;
             insideView=(InsideView)convertView.getTag();
         }
-        setInsideValue(item);
+        insideView.setValue(item);
         return view;
     }
 
@@ -58,5 +59,14 @@ public class SellingAdapter extends ArrayAdapter<Warrant> {
     class InsideView{
         ItemInfo id, type, company;
         Button selling;
+
+        public void setValue(Warrant item){
+            id.setLeftText("仓单号:");
+            id.setRightText(item.getWarrantID()+"");
+            type.setLeftText("物品种类:");
+            type.setRightText(item.getCargoItem());
+            company.setLeftText("仓储公司:");
+            company.setRightText(item.getStorageCompany());
+        }
     }
 }

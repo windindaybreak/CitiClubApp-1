@@ -8,6 +8,7 @@ import androidx.room.ForeignKey;
 import androidx.room.Ignore;
 import androidx.room.Index;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -18,7 +19,7 @@ import java.util.Date;
 @Entity(tableName = "Warrant",
         primaryKeys = "warrantID"
         )
-public class Warrant {
+public class Warrant implements Serializable {
     @NonNull
     @ColumnInfo(name = "warrantID")
     private int warrantID;//仓单号(主键）
@@ -36,8 +37,8 @@ public class Warrant {
     private String StoragePlace;//存储地点
     @ColumnInfo(name = "preparingPlace")
     private String preparingPlace;//填发
-//    @ColumnInfo(name = "preparingDate")
-//    private Date preparingDate;//填发日期
+    @ColumnInfo(name = "preparingDate")
+    private String preparingDate;//填发日期
     @ColumnInfo(name = "StorageCompany")
     private String StorageCompany;//仓储公司(填发地）
     @ColumnInfo(name = "value")
@@ -150,13 +151,16 @@ public class Warrant {
         this.preparingPlace = preparingPlace;
     }
 
-//    public Date getPreparingDate() {
-//        return preparingDate;
-//    }
-//
-//    public void setPreparingDate(int year,int month,int day) {
-//        this.preparingDate = new Date(year,month,day);
-//    }
+    public String getPreparingDate() {
+        return preparingDate;
+    }
+    public void setPreparingDate(String date){
+        this.preparingDate=date;
+    }
+    public void setPreparingDate(int year,int month,int day) {
+
+        setPreparingDate(year+"年"+month+"月"+"日");
+    }
 
 
 }
