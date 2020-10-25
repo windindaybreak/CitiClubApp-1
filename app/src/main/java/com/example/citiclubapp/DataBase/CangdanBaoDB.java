@@ -19,7 +19,18 @@ public abstract class CangdanBaoDB extends RoomDatabase {
     private static CangdanBaoDB cangdanBaoDB;
 
     public static CangdanBaoDB getInstance(Context context) {
+        if (cangdanBaoDB == null) {
+            synchronized (CangdanBaoDB.class) {
+                if (cangdanBaoDB == null) {
+                    cangdanBaoDB = Room.databaseBuilder(context.getApplicationContext(), CangdanBaoDB.class,
+                            "CangDanBao.db")
+                            .allowMainThreadQueries()
+                            .build();
+                }
+            }
+        }
         return cangdanBaoDB;
+
     }
 
     public static void onDestroy() {

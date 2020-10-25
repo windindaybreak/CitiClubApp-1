@@ -7,6 +7,7 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Ignore;
 import androidx.room.Index;
+import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -16,11 +17,11 @@ import java.util.Date;
  */
 
 
-@Entity(tableName = "Warrant",
-        primaryKeys = "warrantID"
+@Entity(tableName = "Warrant"
         )
 public class Warrant implements Serializable {
     @NonNull
+    @PrimaryKey()
     @ColumnInfo(name = "warrantID")
     private int warrantID;//仓单号(主键）
     @ColumnInfo(name = "companyAccount")
@@ -49,6 +50,25 @@ public class Warrant implements Serializable {
     private boolean isZhiya;//能否质押，能true，不能false
     @Ignore
     public static int count=0;//总单数
+
+    public Warrant(int warrantID, int companyAccount, String cargoItem, int cargoWeight,
+                   String owner, int storageExpand, String storagePlace, String preparingPlace,
+                   String preparingDate, String storageCompany, int value, int debtvalue,
+                   boolean isZhiya) {
+        this.warrantID = warrantID;
+        this.companyAccount = companyAccount;
+        this.cargoItem = cargoItem;
+        this.cargoWeight = cargoWeight;
+        this.owner = owner;
+        this.storageExpand = storageExpand;
+        StoragePlace = storagePlace;
+        this.preparingPlace = preparingPlace;
+        this.preparingDate = preparingDate;
+        StorageCompany = storageCompany;
+        this.value = value;
+        this.debtvalue = debtvalue;
+        this.isZhiya = isZhiya;
+    }
 
     public int getCompanyAccount() {
         return companyAccount;

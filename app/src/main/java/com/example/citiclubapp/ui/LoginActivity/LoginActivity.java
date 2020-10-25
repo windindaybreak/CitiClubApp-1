@@ -32,7 +32,7 @@ EditText editText_Name,editText_PassWord;               //初始化布局文件�
         forget_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(LoginActivity.this, WarrantSellingActivity.class);
+                Intent intent=new Intent(LoginActivity.this, SearchBusinessActivity.class);
                 startActivity(intent);
             }
         });

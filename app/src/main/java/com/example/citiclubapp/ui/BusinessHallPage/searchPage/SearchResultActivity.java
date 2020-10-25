@@ -3,7 +3,10 @@ package com.example.citiclubapp.ui.BusinessHallPage.searchPage;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
+import com.example.citiclubapp.DataBase.DBUser;
+import com.example.citiclubapp.Entity.Warrant;
 import com.example.citiclubapp.R;
 import com.example.citiclubapp.widgetLayout.InsideTitle;
 import com.example.citiclubapp.widgetLayout.ItemInfo;
@@ -12,13 +15,15 @@ public class SearchResultActivity extends AppCompatActivity {
     private InsideTitle insideTitle;
     private ItemInfo warrantNum,cargo_type,cargo_num,cargo_owner,storage_expand,storage_place,
             storage_company, preparing_date;
-
+    private DBUser dbUser;
+    private Warrant result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_result);
         IniView();
     }
+
     void IniView(){
         warrantNum=findViewById(R.id.warrantNum);
         cargo_type=findViewById(R.id.cargo_type);

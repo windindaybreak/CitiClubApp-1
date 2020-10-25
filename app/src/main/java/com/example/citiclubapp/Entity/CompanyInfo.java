@@ -50,6 +50,26 @@ public class CompanyInfo {
     @Ignore
     static int count=0;//总账户数
 
+    public CompanyInfo(int accountID, String creditNumber, String companyName, int conditionNode, String registerNum,
+                       String regiterAuthority, String regiterCondition, String taxRegisterNumber, String companyAddress,
+                       long companyPhoneNumber, String legalPersonName, String legalPersonID, String legalPersonPhone,
+                       String bankAccount) {
+        this.accountID = accountID;
+        this.creditNumber = creditNumber;
+        this.companyName = companyName;
+        this.conditionNode = conditionNode;
+        this.registerNum = registerNum;
+        this.regiterAuthority = regiterAuthority;
+        this.regiterCondition = regiterCondition;
+        this.taxRegisterNumber = taxRegisterNumber;
+        this.companyAddress = companyAddress;
+        this.companyPhoneNumber = companyPhoneNumber;
+        this.legalPersonName = legalPersonName;
+        this.legalPersonID = legalPersonID;
+        this.legalPersonPhone = legalPersonPhone;
+        this.bankAccount = bankAccount;
+    }
+
     public int getAccountID() {
         return accountID;
     }
