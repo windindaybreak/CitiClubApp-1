@@ -10,7 +10,10 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.room.ColumnInfo;
 
+import com.example.citiclubapp.DataBase.DBUser;
+import com.example.citiclubapp.Entity.CompanyInfo;
 import com.example.citiclubapp.R;
 import com.example.citiclubapp.widgetLayout.ButtonChoosePhoto;
 import com.example.citiclubapp.widgetLayout.EditorBar;
@@ -27,6 +30,7 @@ public class EnterpriseCertification extends AppCompatActivity {
             legalPersonPhoneEdit;
     private ButtonChoosePhoto licenseButton, IDButtonFront, IDButtonBack;
     private Button submit;
+    private DBUser dbUser;
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -117,7 +121,34 @@ public class EnterpriseCertification extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dbUser=new DBUser();
+                String orgEditText=orgCodeEdit.getText();
+                String  companyNameText=companyName.getText();
+                String companyAddressText=companyAddressEdit.getText();
+                long companyPhoneText=Integer.valueOf(companyPhoneEdit.getText()).longValue();
+                String   businessRegistrationCodeText=businessRegistrationCodeEdit.getText();
+                String businessRegistrationOfficeText=businessRegistrationCodeEdit.getText();
+                String legalPersonNameText=legalPersonNameEdit.getText();
+                String legalPersonCodeText=legalPersonCodeEdit.getText();
+                String legalPersonPhone=legalPersonPhoneEdit.getText();
+                String taxRegistrationCodeText=taxRegistrationCodeEdit.getText();
+                CompanyInfo companyInfo=dbUser.findCompanyByID(EnterpriseCertification.this,CompanyInfo.currentAccountID);
+                companyInfo.setCreditNumber(orgEditText);
+                companyInfo.setCompanyName(companyNameText);
+                companyInfo.setCompanyAddress(companyAddressText);
+                companyInfo.setCompanyPhoneNumber(companyPhoneText);
+                companyInfo.setRegisterNum(businessRegistrationCodeText);
+                companyInfo.setRegiterAuthority(businessRegistrationOfficeText);
+                companyInfo.setLegalPersonName(legalPersonNameText);
+                companyInfo.setLegalPersonID(legalPersonCodeText);
+                companyInfo.setLegalPersonPhone(legalPersonPhone);
+                companyInfo.setTaxRegisterNumber(taxRegistrationCodeText);
+                dbUser.insert(companyInfo,EnterpriseCertification.this);
+                Intent i = new Intent();
+                i.putExtra("result", "");
+                setResult(3, i);
                 finish();
+
             }
         });
     }

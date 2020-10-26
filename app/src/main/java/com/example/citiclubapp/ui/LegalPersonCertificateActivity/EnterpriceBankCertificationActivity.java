@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.citiclubapp.DataBase.DBUser;
+import com.example.citiclubapp.Entity.CompanyInfo;
 import com.example.citiclubapp.R;
 import com.example.citiclubapp.widgetLayout.ButtonChoosePhoto;
 import com.example.citiclubapp.widgetLayout.EditorBar;
@@ -24,6 +26,7 @@ public class EnterpriceBankCertificationActivity extends AppCompatActivity {
     private ButtonChoosePhoto licenseButton;
     private EditorBar companyName, bankAccount, companyAddressEdit;
     private Button submit_bank;
+    private DBUser dbUser;
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -71,14 +74,22 @@ public class EnterpriceBankCertificationActivity extends AppCompatActivity {
 
     }
 
-    private void initializeButton() {
-        licenseButton = findViewById(R.id.uploadLicense_bank);
+    private void initializeButton(){
+        dbUser=new DBUser();
+        licenseButton=findViewById(R.id.uploadLicense_bank);
         licenseButton.setText("点击上传营业执照照片");
         licenseButton.setClick(0);
         submit_bank = findViewById(R.id.submit_bank);
         submit_bank.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String bankAccountText =bankAccount.getText();
+                CompanyInfo companyInfo=dbUser.findCompanyByID(EnterpriceBankCertificationActivity.this,CompanyInfo.currentAccountID);
+                companyInfo.setBankAccount(bankAccountText);
+                dbUser.insert(companyInfo,EnterpriceBankCertificationActivity.this);
+                Intent i = new Intent();
+                i.putExtra("result", "");
+                setResult(3, i);
                 finish();
             }
         });

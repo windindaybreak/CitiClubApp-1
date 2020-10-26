@@ -49,6 +49,7 @@ public class CompanyInfo {
     String legalPersonPhone;//法人联系电话
     @ColumnInfo(name = "bankAccount")
     String bankAccount;//银行账号
+
     @Ignore
     public static int count=0;//总账户数
     @Ignore
@@ -74,11 +75,16 @@ public class CompanyInfo {
         this.legalPersonID = legalPersonID;
         this.legalPersonPhone = legalPersonPhone;
         this.bankAccount = bankAccount;
+
     }
-@Ignore
+
+    @Ignore
     public CompanyInfo(){
 
 }
+
+
+
     public String getPassWord() {
         return passWord;
     }
