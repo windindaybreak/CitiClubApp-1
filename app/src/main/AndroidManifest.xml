@@ -15,6 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.CommonActivity.CommonSubmitSuccessAvtivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ui.BusinessHallPage.EnterpriceInfo.EnterpriceInfoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

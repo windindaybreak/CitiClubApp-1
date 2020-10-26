@@ -14,6 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.citiclubapp.Entity.Condition;
 import com.example.citiclubapp.Entity.Warrant;
 import com.example.citiclubapp.R;
 import com.example.citiclubapp.ui.BusinessHallPage.MyWarrant.WarrantDetailActivity;
@@ -61,7 +62,8 @@ public class MyWarrantAdapter extends ArrayAdapter{
             id.setText(item.getWarrantID());
             type.setText(item.getCargoItem());
             num.setText(String.valueOf(item.getCargoWeight()));
-            //status.setText(item.get);
+            Condition condition=new Condition();
+            status.setText(condition.getCondition(item.getConditionNode()));
             detail.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
