@@ -42,8 +42,6 @@ public class Warrant implements Serializable {
     private int value;//折合市值
     @ColumnInfo(name = "debtvalue")
     private int debtvalue;//贷款额
-    @ColumnInfo(name = "isZhiya")
-    private boolean isZhiya;//能否质押，能true，不能false
     @ColumnInfo(name = "conditionNode")
     private  int conditionNode;//当前状态
     @ColumnInfo(name = "isConditionChange")
@@ -97,14 +95,6 @@ public class Warrant implements Serializable {
 
     public void setCompanyAccount(int companyAccount) {
         this.companyAccount = companyAccount;
-    }
-
-    public boolean isZhiya() {
-        return isZhiya;
-    }
-
-    public void setZhiya(boolean zhiya) {
-        isZhiya = zhiya;
     }
 
     public String getStorageCompany() {
