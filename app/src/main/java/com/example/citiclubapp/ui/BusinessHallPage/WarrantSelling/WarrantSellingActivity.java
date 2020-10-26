@@ -37,7 +37,7 @@ public class WarrantSellingActivity extends AppCompatActivity {
 
     private void initializeListView() {
         DBUser dbUser=new DBUser();
-        List<Warrant> warrantList = Arrays.asList(dbUser.returnAllWarrant(
+        List<Warrant> warrantList = Arrays.asList(dbUser.getSaleableWarrant(
                 WarrantSellingActivity.this));
         SellingAdapter adapter = new SellingAdapter(WarrantSellingActivity.this,
                 R.layout.selling_warrent_item, warrantList);

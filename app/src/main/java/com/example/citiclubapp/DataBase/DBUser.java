@@ -35,7 +35,10 @@ public class DBUser {
         DAOUtils.getWarrantDao(context).deleteExactWarrant(warrantID);
     }
 
-
+    //获取可销售（condition不为8）的Warrant
+    public Warrant[] getSaleableWarrant(Context context){
+        return  DAOUtils.getWarrantDao(context).getSaleableWarrant();
+    }
     public CompanyInfo findCompanyByID(Context context,int accountID){
         return DAOUtils.getCompanyInfoDao(context).loadExactInfo(accountID);
     }
