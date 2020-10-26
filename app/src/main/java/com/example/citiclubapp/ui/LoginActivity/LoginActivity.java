@@ -61,6 +61,7 @@ EditText editText_Name,editText_PassWord;               //初始化布局文件�
                 String password;
                 String name;
                 name=editText_Name.getText().toString();
+                dbUser=new DBUser();
                 CompanyInfo companyInfo=dbUser.findCompanyByName(LoginActivity.this,name)[0];
                 password=companyInfo.getPassWord();
                 if (password.equals(editText_PassWord.getText().toString())){
