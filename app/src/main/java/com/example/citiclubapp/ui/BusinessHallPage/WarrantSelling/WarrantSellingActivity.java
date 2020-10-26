@@ -6,11 +6,14 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.citiclubapp.Adapter.SellingAdapter;
+import com.example.citiclubapp.DataBase.DBUser;
 import com.example.citiclubapp.Entity.Warrant;
 import com.example.citiclubapp.R;
 import com.example.citiclubapp.widgetLayout.InsideTitle;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class WarrantSellingActivity extends AppCompatActivity {
@@ -33,14 +36,9 @@ public class WarrantSellingActivity extends AppCompatActivity {
     }
 
     private void initializeListView() {
-        List<Warrant> warrantList = new ArrayList<>();
-        for (int i = 1; i < 6; i++) {
-            Warrant item = new Warrant();
-            item.setWarrantID(200000 + i);
-            item.setCargoItem(i % 2 == 0 ? "钢材" : "食物");
-            item.setStorageCompany("大连货运仓储公司");
-            warrantList.add(item);
-        }
+        DBUser dbUser=new DBUser();
+        List<Warrant> warrantList = Arrays.asList(dbUser.returnAllWarrant(
+                WarrantSellingActivity.this));
         SellingAdapter adapter = new SellingAdapter(WarrantSellingActivity.this,
                 R.layout.selling_warrent_item, warrantList);
         sellingList.setAdapter(adapter);
