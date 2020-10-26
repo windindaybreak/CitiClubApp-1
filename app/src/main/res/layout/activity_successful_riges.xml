@@ -56,17 +56,17 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="163dp"
+        android:layout_width="wrap_content"
         android:layout_height="59dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginRight="144dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="注册成功"
-        android:textSize="30sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline12"
-        app:layout_constraintVertical_bias="0.226" />
+        app:layout_constraintVertical_bias="0.227" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -77,10 +77,10 @@
         android:src="@drawable/check"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="0.657"
+        app:layout_constraintHorizontal_bias="0.792"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline12"
-        app:layout_constraintVertical_bias="0.224" />
+        app:layout_constraintVertical_bias="0.227" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"

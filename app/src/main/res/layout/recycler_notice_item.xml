@@ -17,6 +17,7 @@
         <ImageView
             android:layout_width="41dp"
             android:layout_height="35dp"
+            android:layout_marginTop="10dp"
             android:src="@drawable/bell">
 
         </ImageView>
@@ -62,6 +63,7 @@
         android:id="@+id/divider2"
         android:layout_width="409dp"
         android:layout_height="1dp"
+        android:layout_marginTop="10dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

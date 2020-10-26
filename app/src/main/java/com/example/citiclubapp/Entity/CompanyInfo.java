@@ -21,6 +21,8 @@ public class CompanyInfo {
     @NonNull
     @ColumnInfo(name = "accountID")
     int accountID;//账户ID（主键）
+    @ColumnInfo(name = "passWord")
+    String passWord;//账户密码
     @ColumnInfo(name = "creditNumber")
     String creditNumber;//统一社会信用代码
     @ColumnInfo(name = "companyName")
@@ -48,13 +50,17 @@ public class CompanyInfo {
     @ColumnInfo(name = "bankAccount")
     String bankAccount;//银行账号
     @Ignore
-    static int count=0;//总账户数
+    public static int count=0;//总账户数
+    @Ignore
+    public static int currentAccountID=0;//总账户数
 
-    public CompanyInfo(int accountID, String creditNumber, String companyName, int conditionNode, String registerNum,
-                       String regiterAuthority, String regiterCondition, String taxRegisterNumber, String companyAddress,
-                       long companyPhoneNumber, String legalPersonName, String legalPersonID, String legalPersonPhone,
-                       String bankAccount) {
+    public CompanyInfo(int accountID, String passWord, String creditNumber, String companyName,
+                       int conditionNode, String registerNum, String regiterAuthority,
+                       String regiterCondition, String taxRegisterNumber, String companyAddress,
+                       long companyPhoneNumber, String legalPersonName, String legalPersonID,
+                       String legalPersonPhone, String bankAccount) {
         this.accountID = accountID;
+        this.passWord = passWord;
         this.creditNumber = creditNumber;
         this.companyName = companyName;
         this.conditionNode = conditionNode;
@@ -68,6 +74,17 @@ public class CompanyInfo {
         this.legalPersonID = legalPersonID;
         this.legalPersonPhone = legalPersonPhone;
         this.bankAccount = bankAccount;
+    }
+@Ignore
+    public CompanyInfo(){
+
+}
+    public String getPassWord() {
+        return passWord;
+    }
+
+    public void setPassWord(String passWord) {
+        this.passWord = passWord;
     }
 
     public int getAccountID() {

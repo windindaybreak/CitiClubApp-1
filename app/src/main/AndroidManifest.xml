@@ -28,7 +28,7 @@
         <activity
             android:name=".ui.LegalPersonCertificateActivity.CertificateNavActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".ui.NoticeActivity"></activity>
+        <activity android:name=".ui.BusinessHallPage.NoticeActivity"></activity>
         <activity
             android:name=".ui.LegalPersonCertificateActivity.EnterpriceBankCertificationActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
