@@ -27,4 +27,7 @@ public class EditorBar extends LinearLayout {
     public void setHint(String hint){
         edit.setHint(hint);
     }
+    public String getText(){
+        return edit.getText().toString();
+    }
 }

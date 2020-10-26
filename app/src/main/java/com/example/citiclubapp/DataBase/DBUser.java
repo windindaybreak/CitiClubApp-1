@@ -48,4 +48,7 @@ public class DBUser {
     public Warrant[] findWarrantByCompany(Context context,int companyAccount){
         return  DAOUtils.getWarrantDao(context).findWarrantByCompany(companyAccount);
     }
+    public Warrant[] findNoticeWarrantByCompany(Context context,int companyAccount){
+        return  DAOUtils.getWarrantDao(context).findNoticeWarrantinfoByid(companyAccount,true);
+    }
 }

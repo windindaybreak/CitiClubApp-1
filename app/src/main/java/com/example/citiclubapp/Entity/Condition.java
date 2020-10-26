@@ -12,7 +12,7 @@ import java.util.Set;
 /**
  * 用来记录仓单入库的状态
  */
-public class condition {
+public class Condition {
     private static Map<Integer,String> conditonMap;
     public static final int REQUEST=0;
     public static final int WAIT_FOR_CHECK=1;
@@ -22,6 +22,7 @@ public class condition {
     public static final int MAKE_WARRANT=5;
     public static final int GURANTEE=6;
     public static final int FINISH=7;
+    public static final int ISZHIYA=8;
     static {
         conditonMap.put(0,"申请");
         conditonMap.put(1,"等待审核");
@@ -31,14 +32,10 @@ public class condition {
         conditonMap.put(5,"制单");
         conditonMap.put(6,"担保机构背书");
         conditonMap.put(7,"已生成");
+        conditonMap.put(8,"是否质押");
     }
-    private int currentConditionNode;
-    public condition() {
-        this.currentConditionNode = 0;
-    }
-    public condition(int currentConditionNode) {
-        this.currentConditionNode = currentConditionNode;
-    }
+
+
     public String getCondition(int number){
         Integer integer=number;
         String result=conditonMap.get(integer);
@@ -58,11 +55,21 @@ public class condition {
         }
         return result;
     }
-    public void setCurrentConditionNode(int node){
-        currentConditionNode=node;
-    }
-
     public String getValue(int id) {
         return conditonMap.get(id);
+    }
+
+    public static String returnConditionText(int conditonCode) {
+        String res="";
+        if(conditonCode==SIGN_ASSIGNMENT){
+            res="您的仓单已通过审核，请提交合同文件";
+        }else if(conditonCode==GURANTEE){
+            res="仓储公司已确认收货，请选择是否选择担保机构";
+        }else if(conditonCode==FINISH){
+            res="您的仓单已经生成，请查看业务状态";
+        }else if(conditonCode==ISZHIYA){
+            res="您的仓单已完成质押，请查看详情";
+        }
+        return res;
     }
 }

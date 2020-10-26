@@ -35,7 +35,7 @@ public class Warrant implements Serializable {
     @ColumnInfo(name = "preparingPlace")
     private String preparingPlace;//填发
     @ColumnInfo(name = "preparingDate")
-    private String preparingDate;//填发日期
+    private String preparingDate;//填发日期(xxxx年xx月xx日）
     @ColumnInfo(name = "StorageCompany")
     private String StorageCompany;//仓储公司(填发地）
     @ColumnInfo(name = "value")
@@ -44,13 +44,17 @@ public class Warrant implements Serializable {
     private int debtvalue;//贷款额
     @ColumnInfo(name = "isZhiya")
     private boolean isZhiya;//能否质押，能true，不能false
+    @ColumnInfo(name = "conditionNode")
+    private  int conditionNode;//当前状态
+    @ColumnInfo(name = "isConditionChange")
+    private boolean isConditionChange;//状态改变的标志
     @Ignore
     public static int count = 0;//总单数
 
     public Warrant(int warrantID, int companyAccount, String cargoItem, int cargoWeight,
-                   String owner, int storageExpand, String storagePlace, String preparingPlace,
-                   String preparingDate, String storageCompany, int value, int debtvalue,
-                   boolean isZhiya) {
+                   String owner, int storageExpand, String storagePlace,
+                   String preparingPlace, String preparingDate, String storageCompany,
+                   int value, int debtvalue, int conditionNode, boolean isConditionChange) {
         this.warrantID = warrantID;
         this.companyAccount = companyAccount;
         this.cargoItem = cargoItem;
@@ -63,7 +67,28 @@ public class Warrant implements Serializable {
         StorageCompany = storageCompany;
         this.value = value;
         this.debtvalue = debtvalue;
-        this.isZhiya = isZhiya;
+        this.conditionNode = conditionNode;
+        this.isConditionChange = isConditionChange;
+    }
+
+
+    public Warrant() {
+
+    }
+    public int getConditionNode() {
+        return conditionNode;
+    }
+
+    public void setConditionNode(int conditionNode) {
+        this.conditionNode = conditionNode;
+    }
+
+    public boolean isConditionChange() {
+        return isConditionChange;
+    }
+
+    public void setConditionChange(boolean conditionChange) {
+        isConditionChange = conditionChange;
     }
 
     public int getCompanyAccount() {
@@ -80,10 +105,6 @@ public class Warrant implements Serializable {
 
     public void setZhiya(boolean zhiya) {
         isZhiya = zhiya;
-    }
-
-    public Warrant() {
-        isZhiya = true;
     }
 
     public String getStorageCompany() {

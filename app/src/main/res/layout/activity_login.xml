@@ -144,7 +144,7 @@
         android:drawablePadding="0dp"
         android:ems="10"
         android:gravity="left|center_vertical"
-        android:hint="请输入用户名/会员号"
+        android:hint="请输入企业名"
         android:inputType="textPersonName"
         android:lines="1"
         android:maxLength="20"

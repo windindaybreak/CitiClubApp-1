@@ -24,4 +24,6 @@ public interface WarrantDAO {
     public void deleteExactWarrant(int id);
     @Query("SELECT * FROM Warrant WHERE warrantID =:id")
     public Warrant findWarrantinfoByid(int id);
+    @Query("SELECT * FROM Warrant WHERE warrantID =:id and isConditionChange=:isConditionChange")
+    public Warrant[] findNoticeWarrantinfoByid(int id,boolean isConditionChange);
 }
