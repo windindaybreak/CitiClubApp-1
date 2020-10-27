@@ -73,6 +73,7 @@ public class Warrant implements Serializable {
     public Warrant() {
 
     }
+
     public int getConditionNode() {
         return conditionNode;
     }

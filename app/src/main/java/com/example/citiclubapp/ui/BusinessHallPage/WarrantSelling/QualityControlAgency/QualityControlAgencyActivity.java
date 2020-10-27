@@ -1,4 +1,4 @@
-package com.example.citiclubapp.ui.BusinessHallPage.QualityControlAgency;
+package com.example.citiclubapp.ui.BusinessHallPage.WarrantSelling.QualityControlAgency;
 
 import androidx.appcompat.app.AppCompatActivity;
 

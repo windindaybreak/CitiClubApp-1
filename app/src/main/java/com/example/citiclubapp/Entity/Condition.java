@@ -38,8 +38,7 @@ public class Condition {
 
     public String getCondition(int number){
         Integer integer=number;
-        String result=conditonMap.get(integer);
-        return result;
+        return conditonMap.get(integer);
     }
     public int getKeyByValue(String value){
         Set<Integer> keys=conditonMap.keySet();

@@ -27,38 +27,38 @@ public class EnterpriceInfoActivity extends AppCompatActivity {
 
     private void setValues() {
         DBUser dbUser = new DBUser();
-        CompanyInfo item = dbUser.findCompanyByID(EnterpriceInfoActivity.this, 1);
+        CompanyInfo item = dbUser.findCompanyByID(EnterpriceInfoActivity.this, CompanyInfo.currentAccountID);
         creditCode = findViewById(R.id.credit_code);
         creditCode.setLeftText("统一社会信用代码");
         creditCode.changeType();
-        //creditCode.setRightText(item.getCreditNumber());
+        creditCode.setRightText(item.getCreditNumber());
         companyName = findViewById(R.id.company_name);
         companyName.setLeftText("公司名称");
         companyName.changeType();
-        //companyName.setRightText(item.getCompanyName());
+        companyName.setRightText(item.getCompanyName());
         registerCode = findViewById(R.id.register_code);
         registerCode.setLeftText("工商注册号");
         registerCode.changeType();
-        //registerCode.setRightText(item.getRegisterNum());
+        registerCode.setRightText(item.getRegisterNum());
         companyAddress = findViewById(R.id.company_address);
         companyAddress.setLeftText("公司地址");
         companyAddress.changeType();
-        //companyAddress.setRightText(item.getCompanyAddress());
+        companyAddress.setRightText(item.getCompanyAddress());
         companyTel = findViewById(R.id.company_tel);
         companyTel.setLeftText("公司电话");
         companyTel.changeType();
-        //companyTel.setRightText(String.valueOf(item.getCompanyPhoneNumber()));
+        companyTel.setRightText(String.valueOf(item.getCompanyPhoneNumber()));
         legalPresonName = findViewById(R.id.legalPerson_name);
         legalPresonName.setLeftText("法人姓名");
         legalPresonName.changeType();
-        //legalPresonName.setRightText(item.getLegalPersonName());
+        legalPresonName.setRightText(item.getLegalPersonName());
         legalPersonCode = findViewById(R.id.legalPerson_id);
         legalPersonCode.setLeftText("法人证字号");
         legalPersonCode.changeType();
-        //legalPersonCode.setRightText(item.getLegalPersonID());
+        legalPersonCode.setRightText(item.getLegalPersonID());
         legalPersonTel = findViewById(R.id.legalPerson_tel);
         legalPersonTel.setLeftText("法人联系电话");
         legalPersonTel.changeType();
-        //legalPersonTel.setRightText(item.getLegalPersonPhone());
+        legalPersonTel.setRightText(item.getLegalPersonPhone());
     }
 }

@@ -10,9 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.citiclubapp.Entity.CompanyInfo;
 import com.example.citiclubapp.R;
-import com.example.citiclubapp.ui.LegalPersonCertificateActivity.CertificateNavActivity;
-import com.example.citiclubapp.ui.LegalPersonCertificateActivity.EnterpriceBankCertificationActivity;
-import com.example.citiclubapp.ui.LegalPersonCertificateActivity.EnterpriseCertification;
+import com.example.citiclubapp.ui.RigesterActivity.LegalPersonCertificateActivity.CertificateNavActivity;
 
 
 /**

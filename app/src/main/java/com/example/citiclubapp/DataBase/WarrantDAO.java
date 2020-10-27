@@ -28,4 +28,6 @@ public interface WarrantDAO {
     public Warrant findWarrantinfoByid(int id);
     @Query("SELECT * FROM Warrant WHERE warrantID =:id and isConditionChange=:isConditionChange")
     public Warrant[] findNoticeWarrantinfoByid(int id,boolean isConditionChange);
+    @Query("SELECT * FROM Warrant WHERE companyAccount =:id and conditionNode=8")
+    public Warrant[] findZhiyaWarrantinfoByCompanyid(int id);
 }

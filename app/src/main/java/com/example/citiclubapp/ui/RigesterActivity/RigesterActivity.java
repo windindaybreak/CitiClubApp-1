@@ -38,12 +38,15 @@ Button havAccount,successfulRegisters;;
         successfulRegisters.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                dbUser=new DBUser();
                 String password,checkPassword;
+                editText_setPasswrd=findViewById(R.id.editText_setPasswrd);
+                editText_checkPass=findViewById(R.id.editText_checkPass);
                 password=editText_setPasswrd.getText().toString();
                 checkPassword=editText_checkPass.getText().toString();
                 if(password.equals(checkPassword)){
-                    int accountID=CompanyInfo.count++;
-                    CompanyInfo companyInfo=new CompanyInfo(accountID, password, "", "", Condition.REQUEST, "", "",
+                    int accountID=dbUser.returnAllCompanyInfo(RigesterActivity.this).length;
+                    CompanyInfo companyInfo=new CompanyInfo(accountID, password, "", "", "", "",
                             "", "", "",
                     0, "", "",
                             "", "");
