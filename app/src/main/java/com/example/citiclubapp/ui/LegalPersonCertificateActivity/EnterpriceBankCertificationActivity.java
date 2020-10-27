@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.citiclubapp.DataBase.DBUser;
 import com.example.citiclubapp.R;
 import com.example.citiclubapp.widgetLayout.ButtonChoosePhoto;
 import com.example.citiclubapp.widgetLayout.EditorBar;
@@ -71,8 +72,9 @@ public class EnterpriceBankCertificationActivity extends AppCompatActivity {
 
     }
 
-    private void initializeButton() {
-        licenseButton = findViewById(R.id.uploadLicense_bank);
+    private void initializeButton(){
+        DBUser dbUser=new DBUser();
+        licenseButton=findViewById(R.id.uploadLicense_bank);
         licenseButton.setText("点击上传营业执照照片");
         licenseButton.setClick(0);
         submit_bank = findViewById(R.id.submit_bank);
