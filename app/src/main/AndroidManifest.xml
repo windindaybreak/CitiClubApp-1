@@ -11,17 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.SplashPage.IntroduceActivity"
+        <activity android:name=".ui.SubmitActivity.ChooseCreditActivity"></activity>
+        <activity
+            android:name=".ui.SplashPage.IntroduceActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ui.BusinessHallPage.EnterpriceInfo.EnterpriceInfoActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".ui.BusinessHallPage.MyWarrant.MyWarrantActivity"
-        <activity android:name=".ui.CommonActivity.CommonSubmitSuccessAvtivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".ui.BusinessHallPage.EnterpriceInfo.EnterpriceInfoActivity"
+            android:name=".ui.SubmitActivity.CommonSubmitSuccessAvtivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ui.BusinessHallPage.MyWarrant.MyWarrantActivity"
@@ -38,8 +36,9 @@
         <activity
             android:name=".ui.RigesterActivity.LegalPersonCertificateActivity.CertificateNavActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".ui.BusinessHallPage.Notice.NoticeActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".ui.BusinessHallPage.Notice.NoticeActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ui.RigesterActivity.LegalPersonCertificateActivity.EnterpriceBankCertificationActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

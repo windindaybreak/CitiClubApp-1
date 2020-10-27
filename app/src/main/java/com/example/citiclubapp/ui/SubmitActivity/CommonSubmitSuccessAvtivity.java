@@ -1,4 +1,4 @@
-package com.example.citiclubapp.ui.CommonActivity;
+package com.example.citiclubapp.ui.SubmitActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
 

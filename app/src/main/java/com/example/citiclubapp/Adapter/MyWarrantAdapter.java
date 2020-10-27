@@ -59,11 +59,10 @@ public class MyWarrantAdapter extends ArrayAdapter{
         TextView id, type, num, status, detail;
         public void setValue(final Warrant item){
             Log.i("warrant id", item.getWarrantID()+"");
-            id.setText(item.getWarrantID());
+            id.setText(String.valueOf(item.getWarrantID()));
             type.setText(item.getCargoItem());
             num.setText(String.valueOf(item.getCargoWeight()));
-            Condition condition=new Condition();
-            status.setText(condition.getCondition(item.getConditionNode()));
+            status.setText(Condition.getCondition(item.getConditionNode()));
             detail.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
