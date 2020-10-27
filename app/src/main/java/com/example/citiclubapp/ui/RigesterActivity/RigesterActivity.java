@@ -45,8 +45,8 @@ Button havAccount,successfulRegisters;;
                 password=editText_setPasswrd.getText().toString();
                 checkPassword=editText_checkPass.getText().toString();
                 if(password.equals(checkPassword)){
-                    int accountID=CompanyInfo.count++;
-                    CompanyInfo companyInfo=new CompanyInfo(accountID, password, "", "", Condition.REQUEST, "", "",
+                    int accountID=dbUser.returnAllCompanyInfo(RigesterActivity.this).length;
+                    CompanyInfo companyInfo=new CompanyInfo(accountID, password, "", "", "", "",
                             "", "", "",
                     0, "", "",
                             "", "");

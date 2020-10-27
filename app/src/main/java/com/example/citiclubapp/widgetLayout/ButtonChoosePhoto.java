@@ -26,17 +26,17 @@ public class ButtonChoosePhoto extends LinearLayout {
     public Button chooseButton;
     public ImageView image;
     public Context context;
-    public static final int CHOOSE_PHOTO=2;
+    public static final int CHOOSE_PHOTO = 2;
 
-    public ButtonChoosePhoto(final Context context, AttributeSet attre){
+    public ButtonChoosePhoto(final Context context, AttributeSet attre) {
         super(context, attre);
-        this.context=context;
-        LayoutInflater.from( context ).inflate( R.layout.button_choose_photo, this );
-        chooseButton=findViewById(R.id.button);
-        image=findViewById(R.id.image);
+        this.context = context;
+        LayoutInflater.from(context).inflate(R.layout.button_choose_photo, this);
+        chooseButton = findViewById(R.id.button);
+        image = findViewById(R.id.image);
     }
 
-    public void setClick(final int code){
+    public void setClick(final int code) {
         chooseButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,34 +51,34 @@ public class ButtonChoosePhoto extends LinearLayout {
         });
     }
 
-    private void clickEvent(int code){
-        if(ContextCompat.checkSelfPermission(context, Manifest.permission.
-                READ_EXTERNAL_STORAGE)==PackageManager.PERMISSION_GRANTED){
-            Intent intent=new Intent("android.intent.action.GET_CONTENT");
+    private void clickEvent(int code) {
+        if (ContextCompat.checkSelfPermission(context, Manifest.permission.
+                READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            Intent intent = new Intent("android.intent.action.GET_CONTENT");
             intent.setType("image/*");
-            if(context instanceof Activity){
-                String info=chooseButton.getText().toString();
-                ((Activity) context).startActivityForResult(intent, CHOOSE_PHOTO+code);
+            if (context instanceof Activity) {
+                String info = chooseButton.getText().toString();
+                ((Activity) context).startActivityForResult(intent, CHOOSE_PHOTO + code);
             }
-        }else{
-            ActivityCompat.requestPermissions((Activity) context,new String[]{Manifest.
+        } else {
+            ActivityCompat.requestPermissions((Activity) context, new String[]{Manifest.
                     permission.READ_EXTERNAL_STORAGE}, 1);
         }
     }
 
-    public void changeType(Uri uri){
-        try{
+    public void changeType(Uri uri) {
+        try {
             Glide.with(context).load(uri).into(image);
             chooseButton.setVisibility(GONE);
             image.setVisibility(VISIBLE);
-        }catch (Exception e){
+        } catch (Exception e) {
             Toast.makeText(context, "加载图片失败", Toast.LENGTH_SHORT).show();
             image.setVisibility(GONE);
             chooseButton.setVisibility(VISIBLE);
         }
     }
 
-    public void setText(String text){
+    public void setText(String text) {
         chooseButton.setText(text);
     }
 }

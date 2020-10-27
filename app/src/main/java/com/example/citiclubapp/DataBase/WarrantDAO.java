@@ -20,10 +20,14 @@ public interface WarrantDAO {
     public Warrant[] loadAllWarrant();
     @Query("SELECT * FROM Warrant WHERE companyAccount =:id")
     public Warrant[] findWarrantByCompany(int id);
+    @Query("SELECT * FROM Warrant WHERE companyAccount= 7")
+    public Warrant[] getSaleableWarrant();
     @Query("DELETE  FROM Warrant WHERE warrantID =:id")
     public void deleteExactWarrant(int id);
     @Query("SELECT * FROM Warrant WHERE warrantID =:id")
     public Warrant findWarrantinfoByid(int id);
     @Query("SELECT * FROM Warrant WHERE warrantID =:id and isConditionChange=:isConditionChange")
     public Warrant[] findNoticeWarrantinfoByid(int id,boolean isConditionChange);
+    @Query("SELECT * FROM Warrant WHERE companyAccount =:id and conditionNode=8")
+    public Warrant[] findZhiyaWarrantinfoByCompanyid(int id);
 }

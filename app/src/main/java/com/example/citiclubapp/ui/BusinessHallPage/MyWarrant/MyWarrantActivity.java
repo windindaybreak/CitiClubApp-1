@@ -1,17 +1,20 @@
 package com.example.citiclubapp.ui.BusinessHallPage.MyWarrant;
 
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.ListView;
-
 import com.example.citiclubapp.Adapter.MyWarrantAdapter;
+import com.example.citiclubapp.DataBase.DBUser;
 import com.example.citiclubapp.Entity.Warrant;
 import com.example.citiclubapp.R;
 import com.example.citiclubapp.widgetLayout.InsideTitle;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MyWarrantActivity extends AppCompatActivity {
@@ -30,8 +33,9 @@ public class MyWarrantActivity extends AppCompatActivity {
     }
 
     private void setList() {
-        List<Warrant> warrantList = new ArrayList<>();
-        for (int i = 1; i < 6; i++) {
+        DBUser dbUser=new DBUser();
+        List<Warrant> warrantList = Arrays.asList(dbUser.returnAllWarrant(MyWarrantActivity.this));
+        /*for (int i = 1; i < 6; i++) {
             Warrant item = new Warrant();
             item.setWarrantID(200000 + i);
             item.setCargoItem(i % 2 == 0 ? "钢材" : "食物");
@@ -39,11 +43,18 @@ public class MyWarrantActivity extends AppCompatActivity {
             item.setCargoWeight(20);
             item.setStorageExpand(i);
             item.setPreparingDate(2020, 10, 1);
+            item.setPreparingPlace("辽宁省大连市大连理工大学");
             item.setStoragePlace("辽宁省大连市大连理工大学");
             warrantList.add(item);
+        }*/
+        if(warrantList.isEmpty()){
+            TextView error=findViewById(R.id.no_warrant);
+            error.setVisibility(View.VISIBLE);
+            listView.setVisibility(View.GONE);
+        }else {
+            MyWarrantAdapter adapter = new MyWarrantAdapter(MyWarrantActivity.this,
+                    R.layout.my_warrant_item, warrantList);
+            listView.setAdapter(adapter);
         }
-        MyWarrantAdapter adapter = new MyWarrantAdapter(MyWarrantActivity.this,
-                R.layout.my_warrant_item, warrantList);
-        listView.setAdapter(adapter);
     }
 }

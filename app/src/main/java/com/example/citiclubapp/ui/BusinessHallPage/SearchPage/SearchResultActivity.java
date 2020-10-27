@@ -1,9 +1,9 @@
-package com.example.citiclubapp.ui.BusinessHallPage.searchPage;
+package com.example.citiclubapp.ui.BusinessHallPage.SearchPage;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.example.citiclubapp.DataBase.DBUser;
 import com.example.citiclubapp.Entity.Warrant;
@@ -22,9 +22,11 @@ public class SearchResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_result);
         IniView();
+        setView();
+
     }
 
-    void IniView(){
+    public void IniView(){
         warrantNum=findViewById(R.id.warrantNum);
         cargo_type=findViewById(R.id.cargo_type);
         cargo_num=findViewById(R.id.cargo_num);
@@ -43,5 +45,19 @@ public class SearchResultActivity extends AppCompatActivity {
         storage_place.setLeftText("存储场所:");
         storage_company.setLeftText("填发地:");
         preparing_date.setLeftText("填发日期:");
+        dbUser=new DBUser();
+    }
+    private void setView(){
+        Intent intent=getIntent();
+        int accountID=intent.getIntExtra("searchID",0);
+        Warrant warrant=dbUser.findWarrantByID(SearchResultActivity.this,accountID);
+        warrantNum.setRightText(warrant.getWarrantID()+"");
+        cargo_type.setRightText(warrant.getCargoItem());
+        cargo_num.setRightText(warrant.getCargoWeight()+"");
+        cargo_owner.setRightText(warrant.getOwner());
+        storage_expand.setRightText(warrant.getStorageExpand()+"");
+        storage_place.setRightText(warrant.getStoragePlace());
+        storage_company.setRightText(warrant.getPreparingPlace());
+        preparing_date.setRightText(warrant.getPreparingDate());
     }
 }

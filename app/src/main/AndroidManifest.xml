@@ -6,6 +6,8 @@
 
     <permission android:name="READ_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,8 +15,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".ui.BusinessHallPage.MyWarrant.MyWarrantActivity"
+        <activity android:name=".ui.SplashPage.IntroduceActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ui.BusinessHallPage.EnterpriceInfo.EnterpriceInfoActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ui.BusinessHallPage.MyWarrant.MyWarrantActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ui.BusinessHallPage.WarrantSelling.WarrantSellingActivity"
@@ -23,14 +30,15 @@
             android:name=".ui.BusinessHallPage.MyWarrant.WarrantDetailActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".ui.BusinessHallPage.QualityControlAgency.QualityControlAgencyActivity"
+            android:name=".ui.BusinessHallPage.WarrantSelling.QualityControlAgency.QualityControlAgencyActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".ui.LegalPersonCertificateActivity.CertificateNavActivity"
+            android:name=".ui.RigesterActivity.LegalPersonCertificateActivity.CertificateNavActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".ui.BusinessHallPage.NoticeActivity"></activity>
+        <activity android:name=".ui.BusinessHallPage.Notice.NoticeActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
-            android:name=".ui.LegalPersonCertificateActivity.EnterpriceBankCertificationActivity"
+            android:name=".ui.RigesterActivity.LegalPersonCertificateActivity.EnterpriceBankCertificationActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ui.RigesterActivity.SuccessfulRiges"
@@ -51,22 +59,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.BusinessHallPage.searchPage.SearchBusinessActivity"
+            android:name=".ui.BusinessHallPage.SearchPage.SearchBusinessActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".ui.BusinessHallPage.searchPage.SearchResultActivity"
+            android:name=".ui.BusinessHallPage.SearchPage.SearchResultActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ui.BusinessHallPage.ZhiyaActivity.ZhiYaActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
-            android:name=".ui.LegalPersonCertificateActivity.EnterpriseCertification"
+            android:name=".ui.RigesterActivity.LegalPersonCertificateActivity.EnterpriseCertification"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ui.BusinessHallPage.ApplyIntoStorage.ApplyForStorageActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".ui.BusinessHallPage.BusinessHallActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
     </application>
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>

@@ -2,6 +2,7 @@ package com.example.citiclubapp.widgetLayout;
 
 import android.content.Context;
 import android.content.Intent;
+import android.text.InputType;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,6 +30,10 @@ public class searchbar extends LinearLayout {
         LayoutInflater.from(context).inflate(R.layout.searchbar,this);
         warrantNum=findViewById(R.id.editTextWarrantNum);
         search=findViewById(R.id.search);
+        warrantNum.setInputType( InputType.TYPE_CLASS_NUMBER);
+    }
+    public int getText(){
+        return Integer.valueOf(warrantNum.getText().toString());
     }
 
 }

@@ -1,4 +1,4 @@
-package com.example.citiclubapp.ui.LegalPersonCertificateActivity;
+package com.example.citiclubapp.ui.RigesterActivity.LegalPersonCertificateActivity;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -55,8 +55,9 @@ public class CertificateNavActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(isFinish==true){
-                    Intent intent=new Intent(CertificateNavActivity.this,BusinessHallActivity.class);
+                    Intent intent=new Intent(CertificateNavActivity.this, BusinessHallActivity.class);
                     startActivity(intent);
+                    Toast.makeText(CertificateNavActivity.this,"11111",Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(CertificateNavActivity.this,"未完成实名认证，请继续完成",Toast.LENGTH_SHORT).show();
                 }

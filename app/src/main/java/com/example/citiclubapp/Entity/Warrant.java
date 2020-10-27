@@ -2,15 +2,11 @@ package com.example.citiclubapp.Entity;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
-import androidx.room.Embedded;
 import androidx.room.Entity;
-import androidx.room.ForeignKey;
 import androidx.room.Ignore;
-import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
  * 构建仓单的实体类方便之后的数据处理
@@ -18,7 +14,7 @@ import java.util.Date;
 
 
 @Entity(tableName = "Warrant"
-        )
+)
 public class Warrant implements Serializable {
     @NonNull
     @PrimaryKey()
@@ -43,15 +39,15 @@ public class Warrant implements Serializable {
     @ColumnInfo(name = "StorageCompany")
     private String StorageCompany;//仓储公司(填发地）
     @ColumnInfo(name = "value")
-    private  int value;//折合市值
+    private int value;//折合市值
     @ColumnInfo(name = "debtvalue")
-    private  int debtvalue;//贷款额
+    private int debtvalue;//贷款额
     @ColumnInfo(name = "conditionNode")
     private  int conditionNode;//当前状态
     @ColumnInfo(name = "isConditionChange")
     private boolean isConditionChange;//状态改变的标志
     @Ignore
-    public static int count=0;//总单数
+    public static int count = 0;//总单数
 
     public Warrant(int warrantID, int companyAccount, String cargoItem, int cargoWeight,
                    String owner, int storageExpand, String storagePlace,
@@ -77,6 +73,7 @@ public class Warrant implements Serializable {
     public Warrant() {
 
     }
+
     public int getConditionNode() {
         return conditionNode;
     }
@@ -185,12 +182,14 @@ public class Warrant implements Serializable {
     public String getPreparingDate() {
         return preparingDate;
     }
-    public void setPreparingDate(String date){
-        this.preparingDate=date;
-    }
-    public void setPreparingDate(int year,int month,int day) {
 
-        setPreparingDate(year+"年"+month+"月"+"日");
+    public void setPreparingDate(String date) {
+        this.preparingDate = date;
+    }
+
+    public void setPreparingDate(int year, int month, int day) {
+
+        setPreparingDate(year + "年" + month + "月" + "日");
     }
 
 

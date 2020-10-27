@@ -27,8 +27,6 @@ public class CompanyInfo {
     String creditNumber;//统一社会信用代码
     @ColumnInfo(name = "companyName")
     String companyName;//公司名称
-    @ColumnInfo(name = "conditionNode")
-    int conditionNode;//状态码
     @ColumnInfo(name = "registerNum")
     String registerNum;//工商注册号
     @ColumnInfo(name = "regiterAuthority")
@@ -56,7 +54,7 @@ public class CompanyInfo {
     public static int currentAccountID=0;//总账户数
 
     public CompanyInfo(int accountID, String passWord, String creditNumber, String companyName,
-                       int conditionNode, String registerNum, String regiterAuthority,
+                        String registerNum, String regiterAuthority,
                        String regiterCondition, String taxRegisterNumber, String companyAddress,
                        long companyPhoneNumber, String legalPersonName, String legalPersonID,
                        String legalPersonPhone, String bankAccount) {
@@ -64,7 +62,6 @@ public class CompanyInfo {
         this.passWord = passWord;
         this.creditNumber = creditNumber;
         this.companyName = companyName;
-        this.conditionNode = conditionNode;
         this.registerNum = registerNum;
         this.regiterAuthority = regiterAuthority;
         this.regiterCondition = regiterCondition;
@@ -101,13 +98,7 @@ public class CompanyInfo {
         this.accountID = accountID;
     }
 
-    public int getConditionNode() {
-        return conditionNode;
-    }
 
-    public void setConditionNode(int conditionNode) {
-        this.conditionNode = conditionNode;
-    }
     public String getBankAccount() {
         return bankAccount;
     }

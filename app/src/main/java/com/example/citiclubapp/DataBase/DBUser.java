@@ -2,12 +2,11 @@ package com.example.citiclubapp.DataBase;
 
 import android.content.Context;
 
-import androidx.room.util.DBUtil;
-
 import com.example.citiclubapp.Entity.CompanyInfo;
 import com.example.citiclubapp.Entity.Warrant;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 数据库使用类
@@ -35,7 +34,10 @@ public class DBUser {
         DAOUtils.getWarrantDao(context).deleteExactWarrant(warrantID);
     }
 
-
+    //获取可销售（condition不为8）的Warrant
+    public Warrant[] getSaleableWarrant(Context context){
+        return  DAOUtils.getWarrantDao(context).getSaleableWarrant();
+    }
     public CompanyInfo findCompanyByID(Context context,int accountID){
         return DAOUtils.getCompanyInfoDao(context).loadExactInfo(accountID);
     }
@@ -50,5 +52,13 @@ public class DBUser {
     }
     public Warrant[] findNoticeWarrantByCompany(Context context,int companyAccount){
         return  DAOUtils.getWarrantDao(context).findNoticeWarrantinfoByid(companyAccount,true);
+    }
+    public List<Warrant> findNoticeZhiyaWarrantByCompanyID(Context context, int companyAccount){
+        List<Warrant> warrants = new ArrayList<>();
+        Warrant[] warrants1 = DAOUtils.getWarrantDao(context).findZhiyaWarrantinfoByCompanyid(companyAccount);
+        for(int i = 0;i< warrants1.length;i++){
+            warrants.add(warrants1[i]);
+        }
+        return warrants;
     }
 }
