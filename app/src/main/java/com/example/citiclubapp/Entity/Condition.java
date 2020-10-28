@@ -1,5 +1,7 @@
 package com.example.citiclubapp.Entity;
 
+import android.view.View;
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;

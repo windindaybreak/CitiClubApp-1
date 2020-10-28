@@ -59,5 +59,39 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="当前状态："
+            android:textColor="@android:color/black"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="type"
+            android:textColor="@android:color/black"
+            android:textSize="22dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp"
+        android:text="点击进行下一步>>"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="22dp" />
 
 </LinearLayout>

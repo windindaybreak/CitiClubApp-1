@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.UploadFile.UpdateFileActivity"
+            android:name=".ui.UploadFile.UploadHeyueActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".ui.SubmitActivity.ChooseCreditActivity"

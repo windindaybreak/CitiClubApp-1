@@ -4,12 +4,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 
+import com.example.citiclubapp.Entity.Condition;
 import com.example.citiclubapp.Entity.Warrant;
 import com.example.citiclubapp.R;
+import com.example.citiclubapp.ui.SubmitActivity.ChooseCreditActivity;
+import com.example.citiclubapp.ui.UploadFile.UploadHeyueActivity;
 import com.example.citiclubapp.widgetLayout.InsideTitle;
 import com.example.citiclubapp.widgetLayout.ItemInfo;
+
+import static com.example.citiclubapp.Entity.Condition.FINISH;
+import static com.example.citiclubapp.Entity.Condition.REQUEST;
+import static com.example.citiclubapp.Entity.Condition.SIGN_ASSIGNMENT;
 
 public class WarrantDetailActivity extends AppCompatActivity {
 
@@ -58,6 +67,36 @@ public class WarrantDetailActivity extends AppCompatActivity {
         sendAddress = findViewById(R.id.send_address);
         sendAddress.setLeftText("填发地：");
         sendAddress.setRightText(item.getPreparingPlace());
+        TextView type=findViewById(R.id.type);
+        final TextView next=findViewById(R.id.next);
+        final int conditionNode=item.getConditionNode();
+        type.setText(Condition.returnConditionText(conditionNode));
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=null;
+                switch (conditionNode){
+                    case REQUEST:
+                        next.setText("点击进行合约签署");
+                        intent=new Intent(WarrantDetailActivity.this, UploadHeyueActivity.class);
+                        intent.putExtra("warrant", item);
+                        break;
+                    case SIGN_ASSIGNMENT:
+                        next.setText("请选择担保机构");
+                        intent=new Intent(WarrantDetailActivity.this, ChooseCreditActivity.class);
+                        intent.putExtra("warrant", item);
+                        break;
+                    case FINISH:
+                        next.setVisibility(View.GONE);
+                        break;
+                    default:
+                        next.setVisibility(View.GONE);
+                        intent=null;
+                }
+                if(intent!=null)
+                    startActivity(intent);
+            }
+        });
     }
 
 }
